@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO & Metadata -->
+    <title>Luxury Home Decor Finds | Curated Amazon Minimalist Aesthetics</title>
+    <meta name="description"
+        content="Explore our handpicked collection of luxury Amazon home decor. Elevate your living space with aesthetic, Pinterest-ready furniture, lighting, and minimalist essentials.">
+    <meta name="keywords"
+        content="Amazon Home Decor, Luxury Interior Design, Minimalist Home, Aesthetic Bedroom, Pinterest Home Finds">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Luxury Home Decor Finds | Aesthetic Amazon Picks">
+    <meta property="og:description"
+        content="Handpicked Amazon home decor products to elevate your living space. Discover aesthetic and high-end finds for every room.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+
+    <!-- Pinterest Verification Placeholder -->
+    <meta name="p:domain_verify" content="PINTEREST_VERIFICATION_CODE_HERE">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'beige': {
+                            'light': '#F5F1EB',
+                            'DEFAULT': '#E8E1D5',
+                            'dark': '#D4A574',
+                        },
+                        'neutral-accent': '#8B7355',
+                        'luxury-black': '#1A1A1A',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .masonry-grid {
+            columns: 2;
+            column-gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .masonry-grid {
+                columns: 3;
+            }
+        }
+
+        .site-logo {
+            display: block;
+            width: 6rem;
+            height: 2.6rem;
+            flex-shrink: 0;
+            object-fit: contain;
+            transform: scale(2.75);
+            transform-origin: left center;
+        }
+
+        @media (max-width: 767px) {
+            .site-logo {
+                width: 5rem;
+                height: 2.2rem;
+                transform: scale(2);
+            }
+        }
+
+        .footer-logo {
+            display: block;
+            width: 14rem;
+            height: auto;
+            object-fit: contain;
+            transform: none;
+        }
+
+        .decor-image-box {
+            border: 1px solid rgba(139, 115, 85, 0.24);
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(245, 241, 235, 0.7));
+            box-shadow: 0 18px 38px rgba(26, 26, 26, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.72);
+        }
+
+        .featured-finds {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 12% 12%, rgba(255, 255, 255, 0.78), transparent 26%),
+                radial-gradient(circle at 82% 18%, rgba(183, 138, 86, 0.14), transparent 30%),
+                linear-gradient(180deg, #f7f2eb 0%, #f3ede5 100%);
+        }
+
+        .featured-finds::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.28;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+            background-size: 38px 38px;
+            mask-image: linear-gradient(180deg, transparent, #000 20%, #000 80%, transparent);
+        }
+
+        .section-divider {
+            display: block;
+            height: 1px;
+            width: 5.5rem;
+            margin: 1.5rem auto 0;
+            background: linear-gradient(90deg, transparent, rgba(183, 138, 86, 0.72), transparent);
+        }
+
+        .filter-pill {
+            border: 1px solid rgba(139, 115, 85, 0.22);
+            background: rgba(255, 255, 255, 0.58);
+            color: #665641;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .filter-pill:hover,
+        .filter-pill.active {
+            border-color: rgba(26, 26, 26, 0.85);
+            background: #1A1A1A;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(26, 26, 26, 0.14);
+        }
+
+        .product-card {
+            display: flex;
+            height: 100%;
+            min-height: 100%;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid rgba(139, 115, 85, 0.16);
+            border-radius: 1.25rem;
+            background: rgba(255, 252, 246, 0.78);
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.06),
+                0 2px 8px rgba(0, 0, 0, 0.04);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 165, 116, 0.34);
+            box-shadow:
+                0 28px 70px rgba(63, 48, 33, 0.14),
+                0 10px 26px rgba(26, 26, 26, 0.08);
+        }
+
+        .product-card.is-hidden {
+            display: none;
+        }
+
+        .product-media {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 4 / 3;
+            background: #e8e1d5;
+        }
+
+        .product-media::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to top, rgba(0, 0, 0, 0.18), transparent 48%),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(26, 26, 26, 0.08));
+            pointer-events: none;
+        }
+
+        .product-image {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: saturate(0.82) contrast(0.98) sepia(0.1) brightness(0.98);
+            transition: transform 0.75s cubic-bezier(0.4, 0, 0.2, 1), filter 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.055);
+            filter: saturate(0.94) contrast(1.02) sepia(0.04) brightness(1);
+        }
+
+        .category-badge,
+        .trend-badge {
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.7);
+            color: #4d4032;
+            box-shadow: 0 8px 22px rgba(26, 26, 26, 0.08);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .product-content {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+        }
+
+        .product-title {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.3;
+            color: #221f1b;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.65rem;
+            color: #b78a56;
+            font-size: 0.82rem;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .rating-stars {
+            display: inline-flex;
+            gap: 0.08rem;
+            letter-spacing: 0;
+        }
+
+        .rating-score {
+            color: #74685e;
+            font-size: 0.72rem;
+            font-weight: 600;
+        }
+
+        .product-highlights {
+            display: grid;
+            gap: 0.5rem;
+            margin: 0 0 1.35rem;
+            padding: 0;
+            list-style: none;
+        }
+
+        .product-highlights li {
+            position: relative;
+            padding-left: 1rem;
+            color: #6b6258;
+            font-size: 0.8rem;
+            line-height: 1.55;
+        }
+
+        .product-highlights li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.64em;
+            height: 0.32rem;
+            width: 0.32rem;
+            border-radius: 999px;
+            background: #b78a56;
+            box-shadow: 0 0 0 4px rgba(183, 138, 86, 0.12);
+        }
+
+        .premium-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 3rem;
+            width: 100%;
+            margin-top: auto;
+            border-radius: 999px;
+            background: #1A1A1A;
+            color: #fff;
+            box-shadow: 0 16px 34px rgba(26, 26, 26, 0.16), 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.13em;
+            text-align: center;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .premium-cta:hover {
+            transform: translateY(-2px);
+            background: #211c17;
+            box-shadow: 0 22px 42px rgba(26, 26, 26, 0.24), 0 0 32px rgba(183, 138, 86, 0.18);
+        }
+
+        .premium-cta:focus-visible,
+        .filter-pill:focus-visible {
+            outline: 3px solid rgba(183, 138, 86, 0.32);
+            outline-offset: 4px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-luxury-black font-sans selection:bg-beige-dark selection:text-white">
+
+    <!-- STICKY NAVIGATION BAR -->
+    <nav class="fixed top-0 w-full z-50 glass py-4 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="inline-flex items-center" aria-label="Luxe Spaces home">
+                <img src="images/logo%20horizontal%20remove%20bg.png" alt="Luxe Spaces" class="site-logo">
+            </a>
+
+            <div class="hidden md:flex space-x-8 text-sm font-normal tracking-wide uppercase">
+                <a href="#categories" class="hover:text-beige-dark transition-colors">Categories</a>
+                <a href="#finds" class="hover:text-beige-dark transition-colors">Curated Finds</a>
+                <a href="#inspiration" class="hover:text-beige-dark transition-colors">Inspiration</a>
+            </div>
+
+            <button
+                class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full text-luxury-black transition-colors hover:bg-white/60 focus:outline-none focus:ring-2 focus:ring-beige-dark/50"
+                id="mobile-menu-btn" type="button" aria-controls="mobile-menu" aria-expanded="false"
+                aria-label="Open navigation menu">
+                <i data-lucide="menu" class="w-6 h-6" id="mobile-menu-open-icon"></i>
+                <i data-lucide="x" class="hidden w-6 h-6" id="mobile-menu-close-icon"></i>
+            </button>
+        </div>
+
+        <div class="hidden md:hidden border-t border-white/40 bg-white/95 px-6 py-5 shadow-lg" id="mobile-menu">
+            <div class="flex flex-col gap-4 text-sm font-normal uppercase tracking-wide text-luxury-black">
+                <a href="#categories"
+                    class="mobile-nav-link rounded-lg px-3 py-3 transition-colors hover:bg-beige-light hover:text-beige-dark">Categories</a>
+                <a href="#finds"
+                    class="mobile-nav-link rounded-lg px-3 py-3 transition-colors hover:bg-beige-light hover:text-beige-dark">Curated
+                    Finds</a>
+                <a href="#inspiration"
+                    class="mobile-nav-link rounded-lg px-3 py-3 transition-colors hover:bg-beige-light hover:text-beige-dark">Inspiration</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section
+        class="relative min-h-[620px] md:min-h-[720px] lg:min-h-[820px] flex items-center justify-start overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="images\banner 1.webp" alt="Luxury Living Space" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/30"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-left text-white">
+            <div class="max-w-3xl">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 animate-fade-in opacity-0"
+                    style="animation-delay: 0.2s;">
+                    Make Your Space Feel Effortlessly Luxurious
+                </h1>
+                <p class="text-base md:text-lg font-light mb-10 max-w-2xl animate-fade-in opacity-0"
+                    style="animation-delay: 0.4s;">
+                    Discover curated Amazon home finds inspired by modern Pinterest interiors, cozy living, and elevated
+                    everyday spaces.
+                </p>
+                <a href="#finds"
+                    class="inline-block bg-white text-luxury-black px-8 py-3 rounded-full font-medium uppercase tracking-widest text-xs hover:bg-beige-light transition-all shadow-xl hover:-translate-y-1 animate-fade-in opacity-0"
+                    style="animation-delay: 0.6s;">
+                    Explore Curated Picks
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="text-white w-6 h-6"></i>
+        </div>
+    </section>
+
+    <!-- TRENDING CATEGORIES SECTION -->
+    <section id="categories" class="py-24 bg-beige-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-beige-dark uppercase tracking-widest text-xs font-bold mb-2 block">Curated
+                    Collections</span>
+                <h2 class="text-4xl md:text-5xl font-serif">Trending Categories</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Category Card 1 -->
+                <a href="#finds" class="decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
+                    <img src="images\bedroom decor.webp" alt="Bedroom Decor"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+                        <h3 class="text-2xl font-serif mb-2">Bedroom Decor</h3>
+                        <p class="text-sm font-light opacity-0 group-hover:opacity-100 transition-opacity">Cozy &
+                            tranquil escapes</p>
+                    </div>
+                </a>
+
+                <!-- Category Card 2 -->
+                <a href="#finds" class="decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
+                    <img src="images\living room decor.webp" alt="Living Room"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+                        <h3 class="text-2xl font-serif mb-2">Living Room Essentials</h3>
+                        <p class="text-sm font-light opacity-0 group-hover:opacity-100 transition-opacity">Social &
+                            stylish hubs</p>
+                    </div>
+                </a>
+
+                <!-- Category Card 3 -->
+                <a href="#finds" class="decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
+                    <img src="images\work space decor.webp" alt="Workspace"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+                        <h3 class="text-2xl font-serif mb-2">Workspace Aesthetics</h3>
+                        <p class="text-sm font-light opacity-0 group-hover:opacity-100 transition-opacity">
+                            High-performance styling</p>
+                    </div>
+                </a>
+
+                <!-- Category Card 4 -->
+                <a href="#finds" class="decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
+                    <img src="images\kitchen decor.webp" alt="Kitchen"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+                        <h3 class="text-2xl font-serif mb-2">Kitchen Decor</h3>
+                        <p class="text-sm font-light opacity-0 group-hover:opacity-100 transition-opacity">Functional
+                            charm</p>
+                    </div>
+                </a>
+
+                <!-- Category Card 5 -->
+                <a href="#finds" class="decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
+                    <img src="images\cozy lighting decor.webp" alt="Lighting"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+                        <h3 class="text-2xl font-serif mb-2">Cozy Lighting</h3>
+                        <p class="text-sm font-light opacity-0 group-hover:opacity-100 transition-opacity">Atmosphere &
+                            ambiance</p>
+                    </div>
+                </a>
+
+                <!-- Category Card 6 -->
+                <a href="#finds" class="decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
+                    <img src="images\wall decor.webp" alt="Wall Decor"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+                        <h3 class="text-2xl font-serif mb-2">Wall Decor</h3>
+                        <p class="text-sm font-light opacity-0 group-hover:opacity-100 transition-opacity">Personalized
+                            expressions</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED AMAZON FINDS SECTION -->
+    <section id="finds" class="featured-finds py-24 md:py-32">
+        <div class="container relative z-10 mx-auto px-6">
+            <header class="mx-auto mb-10 max-w-4xl text-center md:mb-12">
+                <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.32em] text-[#9b7650]">Curated
+                    Collection</span>
+                <h2 class="font-serif text-4xl leading-tight text-[#221f1b] md:text-6xl">Featured Amazon Finds</h2>
+                <p class="mx-auto mt-5 max-w-2xl text-sm font-light leading-7 text-[#62564b] md:text-base">
+                    Luxury-inspired decor picks for elevated living, edited for warm materials, quiet silhouettes, and
+                    rooms that feel intentionally composed.
+                </p>
+                <span class="section-divider" aria-hidden="true"></span>
+            </header>
+
+            <div class="mb-12 flex flex-wrap justify-center gap-3" aria-label="Product category filters">
+                <button
+                    class="filter-pill active rounded-full px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em]"
+                    type="button" data-filter="all">All</button>
+                <button class="filter-pill rounded-full px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em]"
+                    type="button" data-filter="living-room">Living Room</button>
+                <button class="filter-pill rounded-full px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em]"
+                    type="button" data-filter="lighting">Lighting</button>
+                <button class="filter-pill rounded-full px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em]"
+                    type="button" data-filter="workspace">Workspace</button>
+                <button class="filter-pill rounded-full px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em]"
+                    type="button" data-filter="kitchen">Kitchen</button>
+                <button class="filter-pill rounded-full px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em]"
+                    type="button" data-filter="bedroom">Bedroom</button>
+            </div>
+
+            <div class="grid grid-cols-1 gap-7 sm:grid-cols-2 xl:grid-cols-3" id="product-grid">
+                <article class="product-card group reveal" data-category="living-room">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Living room\pillow.webp"
+                            alt="Cream white corduroy throw pillow covers styled on a sofa" class="product-image">
+                        <span
+                            class="trend-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Trending</span>
+                    </div>
+                    <div class="product-content p-6">
+
+                        <h3 class="product-title font-serif">Corduroy Throw Pillow Covers</h3>
+                        <div class="product-rating" aria-label="Rated 4.6 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.6</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A soft cream-white pillow cover set
+                            that adds cozy texture to sofas, lounge chairs, and layered beds.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Striped corduroy texture with a modern farmhouse feel</li>
+                            <li>Pack of 2 covers sized for 18 x 18 inch inserts</li>
+                        </ul>
+                        <a href="https://amzn.to/4nQP0oj" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="living-room">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Living room\living room rug.webp"
+                            alt="Neutral textured area rug styled in a modern living room" class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Living
+                            Room</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Neutral Textured Area Rug</h3>
+                        <div class="product-rating" aria-label="Rated 4.5 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.2</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A soft woven foundation that warms
+                            seating areas and makes the whole room feel more grounded.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Natural texture for layered living rooms</li>
+                            <li>Calm neutral tone that works with wood and linen</li>
+                        </ul>
+                        <a href="https://amzn.to/4tZI9KD" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="living-room">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Living room\Curtains.webp"
+                            alt="Cream linen back tab curtain panels for living room windows" class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Living
+                            Room</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Cream Linen Back Tab Curtains</h3>
+                        <div class="product-rating" aria-label="Rated 4.7 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rating-score">4.7</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">Airy ivory curtain panels that
+                            soften living room light while adding an elegant, linen-textured finish.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>2-panel set with back tab, rod pocket, or clip ring styling</li>
+                            <li>Semi-sheer linen blend filters light while keeping privacy</li>
+                        </ul>
+                        <a href="https://a.co/d/0cQNgMlw" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="living-room">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Living room\Curtain Tiebacks.webp"
+                            alt="Wood bead magnetic curtain tiebacks styled for living room curtains"
+                            class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Living
+                            Room</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Wood Bead Magnetic Curtain Tiebacks</h3>
+                        <div class="product-rating" aria-label="Rated 4.7 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rating-score">4.7</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">Boho wood-bead tiebacks that hold
+                            curtains neatly open while adding a warm, natural accent to windows.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Magnetic holdbacks require no drilling or wall hooks</li>
+                            <li>Flexible 2-pack works with sheer, linen, and thicker panels</li>
+                        </ul>
+                        <a href="https://amzn.to/4dOs04u" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="living-room">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Living room\Lamp Set.webp"
+                            alt="Beige and white ceramic table lamps for living room end tables" class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Living
+                            Room</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Modern Ceramic Table Lamps</h3>
+                        <div class="product-rating" aria-label="Rated 4.6 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.6</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A set of softly neutral ceramic
+                            lamps that brings warm, balanced lighting to sofas, consoles, and end tables.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Set of 2 lamps for symmetrical living room styling</li>
+                            <li>Beige and white finish works with modern farmhouse decor</li>
+                        </ul>
+                        <a href="https://amzn.to/4aaNzLy" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="lighting">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Lighting\3-in-1 Sunset Lamp.webp"
+                            alt="Mubarek ambient lighting mood projector for bedroom decor" class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Lighting</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Mubarek Ambient Mood Projector</h3>
+                        <div class="product-rating" aria-label="Featured lighting pick">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">New</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A 3-in-1 sunset, ocean, and northern
+                            lights projector that turns bedrooms and cozy corners into soft ambient escapes.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>216 mood lighting modes with remote control</li>
+                            <li>Great for bedrooms, teen rooms, and relaxed night styling</li>
+                        </ul>
+                        <a href="https://amzn.to/4wQnI5z" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="lighting">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Lighting\Hanging Picture Fairy Lights.webp"
+                            alt="Hanging picture fairy lights with clips for bedroom wall decor" class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Lighting</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Hanging Picture Fairy Lights</h3>
+                        <div class="product-rating" aria-label="Rated 4.5 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.5</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A 40 ft warm fairy-light strand with
+                            photo clips that turns bedroom walls, dorm corners, and memory boards into a soft glowing
+                            display.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>120 LEDs with 50 clear clips for photos and notes</li>
+                            <li>8 lighting modes, timer setting, and waterproof design</li>
+                        </ul>
+                        <a href="https://amzn.to/3PPX4ZR" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="lighting">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Lighting\Floor Standing Tall Lamp.webp"
+                            alt="Black dimmable floor standing lamp with linen lampshade" class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Lighting</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Dimmable Floor Standing Lamp</h3>
+                        <div class="product-rating" aria-label="Featured lighting pick">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">New</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A slim black floor lamp with a linen
+                            shade and dimmable LED bulb for bedrooms, offices, nurseries, and living room corners.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>12W LED bulb adjusts from warm to cool color temperature</li>
+                            <li>Remote control, foot switch, timer, and night mode included</li>
+                        </ul>
+                        <a href="https://amzn.to/4fcHKRo" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="lighting">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Lighting\Wireless Wall Lights.webp"
+                            alt="Gold rechargeable wall sconces with white shades" class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Lighting</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Rechargeable Wall Sconce Set</h3>
+                        <div class="product-rating" aria-label="Rated 4.6 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.6</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A set of gold wireless wall sconces
+                            with white shades that adds polished, flexible lighting to bedrooms, hallways, and living
+                            spaces.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Rechargeable set of 2 with remote control</li>
+                            <li>Adjustable brightness, timer, color temperature, and RGB colors</li>
+                        </ul>
+                        <a href="https://amzn.to/4wWk3TH" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="lighting">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Lighting\Lamp Projector.webp"
+                            alt="Neroupe sunset lamp projector with multicolor LED light" class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Lighting</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Neroupe Sunset Lamp Projector</h3>
+                        <div class="product-rating" aria-label="Rated 4.4 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.4</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A color-changing sunset projector
+                            that adds dreamy mood lighting for bedrooms, parties, live streams, and styled room corners.
+                        </p>
+                        <ul class="product-highlights mt-5">
+                            <li>App and button control for color, brightness, and modes</li>
+                            <li>360 degree flexible angle with RGB+W LED light effects</li>
+                        </ul>
+                        <a href="https://amzn.to/4nSKPs7" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="lighting">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Lighting\LED shower lamp.webp"
+                            alt="Growalleter 16-Color LED projection lamp on a nightstand with ambient glow"
+                            class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Lighting</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Growalleter 16-Color LED Projection Lamp</h3>
+                        <div class="product-rating" aria-label="Featured lighting pick">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.3</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A mesmerizing 16-color LED
+                            projection lamp that casts dreamy ambient light across walls and ceilings, perfect for
+                            bedrooms, meditation corners, and relaxation spaces.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>16 color modes with remote control for easy switching</li>
+                            <li>Compact USB-powered design ideal for nightstands and desks</li>
+                        </ul>
+                        <a href="https://www.amazon.com/Growalleter-Projector-16-Color-Projection-Relaxation/dp/B0CY2GP3QN/ref=sr_1_19?crid=13DQURMLKXO9X&dib=eyJ2IjoiMSJ9.fepy0mSJ2VOByArGuqqQZpP1tSoHfZCTz5bNE8wB7kXIlwLQNV4f_qaP_f0QNeXl8j0aNI3Ey-VJhsZtNgoOV8oTF2n90UEULRJvEOr4htBBHwovFe7zEd5Y2W7w2vaJL5JQsrsW0uNhS9r5eYWeALEqVemsk-UM95t0stKXxAtCZls-N5bOVZn7KLH9_a7baaD75n2moGK-djIBZXn0Hri3tmkHbN2GxYw3ljtMJuvBq9L9uuk085YrqtKBj9ZUqtA_zq_LXsLYVje2pXx4wnRdCHrroxt6HNirT8sjcFs.45w9J8jvE5XUG6kVlt7MRd2jsZSEAZA1RZvyezhA8X4&dib_tag=se&keywords=lighting+decor+for+room&qid=1781753986&sprefix=%2Caps%2C380&sr=8-19"
+                            class="premium-cta" target="_blank" rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="living-room">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Living room\Ceramic Vase.webp"
+                            alt="Pearl white heart shaped ceramic vase set for living room decor" class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Living
+                            Room</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Heart Shaped Ceramic Vase Set</h3>
+                        <div class="product-rating" aria-label="Rated 4.7 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rating-score">4.7</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A sculptural pearl-white vase pair
+                            that adds soft, minimalist shape to coffee tables, mantels, and shelves.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Set of 2 ceramic vases with a modern heart silhouette</li>
+                            <li>Works beautifully with pampas grass, stems, or alone</li>
+                        </ul>
+                        <a href="https://amzn.to/4v4wISE" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="workspace">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Workspace\dual monitor stand.webp"
+                            alt="gianotter dual monitor stand riser with drawer and pen holders on a desk"
+                            class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Workspace</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Dual Monitor Stand Riser</h3>
+                        <div class="product-rating" aria-label="Rated 4.6 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.6</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A sleek dual monitor stand with
+                            built-in drawer and pen holders that elevates screens to eye level while keeping your
+                            workspace clean and organized.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Built-in drawer and 2 magnetic pen holders for desk organization</li>
+                            <li>No assembly required — unbox and place for instant ergonomic setup</li>
+                        </ul>
+                        <a href="https://amzn.to/4uI6GEk" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="workspace">
+                    <div class="product-media aspect-[4/3]" style="background-color: #f0ebe4;">
+                        <img src="images\Products\Workspace\Abstract sculpture statue.webp"
+                            alt="Ozzptuu sandstone resin thinker style abstract sculpture on a desk"
+                            class="product-image" style="object-fit: contain;">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Workspace</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Thinker Style Abstract Sculpture</h3>
+                        <div class="product-rating" aria-label="Rated 4.3 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.3</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A contemplative sandstone-resin
+                            abstract figurine that brings an intellectual, artistic accent to desks, bookshelves, and
+                            mantelpieces.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Polished sandstone-resin composite with a natural stone texture</li>
+                            <li>Compact 2.5" x 2.5" x 4.75" size perfect for desktops and shelves</li>
+                        </ul>
+                        <a href="https://www.amazon.com/Ozzptuu-Sandstone-Sculpture-Collectible-Figurines/dp/B09TK1MTCV"
+                            class="premium-cta" target="_blank" rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="workspace">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Workspace\desk.webp"
+                            alt="Height adjustable standing desk with natural wood top and white steel frame"
+                            class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Workspace</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Height Adjustable Standing Desk</h3>
+                        <div class="product-rating" aria-label="Rated 4.5 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.5</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A clean, minimal standing desk
+                            with a natural wood tabletop and sturdy white steel frame that adjusts effortlessly for
+                            sit-to-stand work throughout the day.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Smooth height adjustment for ergonomic sit-stand transitions</li>
+                            <li>Natural wood finish pairs beautifully with modern home offices</li>
+                        </ul>
+                        <a href="https://amzn.to/43MtkAr" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="workspace">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Workspace\desk 2.webp"
+                            alt="Modern industrial writing desk with walnut wood top and black metal frame"
+                            class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Workspace</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Modern Industrial Writing Desk</h3>
+                        <div class="product-rating" aria-label="Rated 4.5 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.5</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A sleek industrial-style desk
+                            with a warm walnut wood tabletop and sturdy black metal frame, featuring a built-in
+                            drawer for clean, organized workspaces.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Walnut wood top with black steel frame for a modern industrial look</li>
+                            <li>Built-in drawer keeps essentials tucked away and desk clutter-free</li>
+                        </ul>
+                        <a href="https://amzn.to/3Qd2SwN" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="workspace">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Workspace\wooden board.webp"
+                            alt="U Brands cork bulletin board with birch wood frame mounted above a workspace desk"
+                            class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Workspace</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Cork Bulletin Board with Wood Frame</h3>
+                        <div class="product-rating" aria-label="Rated 4.6 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.6</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A natural cork bulletin board
+                            with a light birch wood frame that turns workspace walls into an organized, aesthetic
+                            display for notes, photos, and inspiration.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Self-healing cork surface conceals pinholes for a clean look</li>
+                            <li>Mounts vertically or horizontally with included hardware</li>
+                        </ul>
+                        <a href="https://www.amazon.com/Brands-Bulletin-Board-Inches-Light/dp/B00PRYQ9YU"
+                            class="premium-cta" target="_blank" rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                    </article>
+
+                <article class="product-card group reveal" data-category="workspace">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Workspace\shelf.webp"
+                            alt="Furinno ROSSI 5-tier zigzag corner floating shelf mounted on a wall in espresso finish"
+                            class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Workspace</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Furinno ROSSI 5-Tier Zigzag Corner Shelf</h3>
+                        <div class="product-rating" aria-label="Rated 4.5 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.5</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A sleek 5-tier radial corner floating shelf that transforms empty corners into stylish vertical display space for books, decor, and plants in any workspace or living area.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Modern zigzag design fits 90-degree corners without taking floor space</li>
+                            <li>Each shelf holds up to 10 lbs; total 50 lbs capacity across 5 tiers</li>
+                        </ul>
+                        <a href="https://amzn.to/3Qw0i54" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="kitchen">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Kitchen\coasters.webp"
+                            alt="Lazebox cotton woven coaster set of 8 for drinks on a coffee table" class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Kitchen</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Lazebox Cotton Woven Coaster Set</h3>
+                        <div class="product-rating" aria-label="Rated 4.7 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rating-score">4.7</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A set of 8 absorbent cotton coasters that protect tabletops while adding a warm, textured accent to kitchen counters and coffee tables.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Set of 8 coasters plus metal holder for easy storage</li>
+                            <li>Highly absorbent cotton-linen material, hand wash only</li>
+                        </ul>
+                        <a href="https://amzn.to/4oyvw84" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="kitchen">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Kitchen\organizer.webp"
+                            alt="Ukeetap extra large expandable black silverware organizer in a kitchen drawer" class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Kitchen</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Expandable Silverware Organizer</h3>
+                        <div class="product-rating" aria-label="Rated 4.7 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rating-score">4.7</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">An extra large expandable drawer organizer with adjustable compartments for cutlery, utensils, and kitchen tools.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Expands from 12.4" to 21" to fit most standard drawers</li>
+                            <li>BPA-free, food-safe plastic with 7 deep compartments</li>
+                        </ul>
+                        <a href="https://amzn.to/4aXMVkW" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="kitchen">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Kitchen\ceramic flower vases.webp"
+                            alt="Vintage ceramic vase set of 3 in green and beige chinoiserie style" class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Kitchen</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Vintage Ceramic Vase Set of 3</h3>
+                        <div class="product-rating" aria-label="Rated 4.7 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rating-score">4.7</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A set of 3 vintage ceramic vases with hand-applied crackle glaze, perfect for fresh or dried flowers on kitchen counters, shelves, and tables.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Set of 3 varied shapes and sizes for versatile styling</li>
+                            <li>Waterproof interior coating for fresh flower arrangements</li>
+                        </ul>
+                        <a href="https://amzn.to/3SkmUGf" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="kitchen">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Kitchen\kinfe.webp"
+                            alt="Martha Stewart Eastwalk 14 piece linen white knife block set on a kitchen counter" class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Kitchen</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Martha Stewart Knife Block Set</h3>
+                        <div class="product-rating" aria-label="Rated 4.5 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.5</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A 14-piece high carbon stainless steel cutlery set with triple-riveted handles and a premium acacia wood block.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>14-piece set includes chef knife, santoku, bread knife, and more</li>
+                            <li>Forged stainless steel with full tang construction for balance</li>
+                        </ul>
+                        <a href="https://amzn.to/4oDtjsc" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="kitchen">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Kitchen\washable runner.webp"
+                            alt="Beige washable runner rug with non-slip backing for kitchen hallway" class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Kitchen</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Washable Kitchen Runner Rug</h3>
+                        <div class="product-rating" aria-label="Rated 4.7 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rating-score">4.7</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A vintage soft runner rug with non-slip backing, perfect for kitchens, laundry rooms, and entryways.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Machine washable and stain resistant for easy maintenance</li>
+                            <li>Non-slip backing keeps rug securely in place on hard floors</li>
+                        </ul>
+                        <a href="https://amzn.to/3QTEe4q" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="bedroom">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Bedroom\comforter set.webp"
+                            alt="Monbix olive green queen comforter set with 7 pieces bed in a bag bedding"
+                            class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Bedroom</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Monbix Queen Comforter Set</h3>
+                        <div class="product-rating" aria-label="Rated 4.3 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.3</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A complete 7-piece olive green bedding set with a double-brushed comforter, sheets, shams, and pillowcases for a soft, cohesive bedroom refresh.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>7-piece set includes comforter, sheets, shams &amp; pillowcases</li>
+                            <li>OEKO-TEX certified, machine washable for easy care</li>
+                        </ul>
+                        <a href="https://amzn.to/43NWsY8" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="bedroom">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Bedroom\bedroom stand.webp"
+                            alt="Lazzanto black nightstand with LED light strip and charging station for bedroom"
+                            class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Bedroom</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Lazzanto LED Night Stand</h3>
+                        <div class="product-rating" aria-label="Rated 4.4 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.4</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A modern nightstand with built-in LED light strip, USB ports, AC outlets, and 2 fabric drawers — perfect for keeping bedside essentials charged and organized.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Smart LED light strip with app, voice, and music sync control</li>
+                            <li>2 USB ports &amp; 2 AC outlets for clutter-free charging</li>
+                        </ul>
+                        <a href="https://amzn.to/43MZA6w" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="bedroom">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Bedroom\water fountain.webp"
+                            alt="Homedics Silver Springs tabletop water fountain with 3-tier waterfall and LED light"
+                            class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Bedroom</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Homedics Tabletop Water Fountain</h3>
+                        <div class="product-rating" aria-label="Rated 4.1 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.1</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A 3-tier tabletop fountain with LED lighting and natural river rocks that brings calming zen relaxation to any bedroom corner.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>#1 Best Seller in Tabletop Fountains with 44k+ ratings</li>
+                            <li>Automatic pump with on/off switch for soothing water sound</li>
+                        </ul>
+                        <a href="https://amzn.to/4erhrEM" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="bedroom">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Bedroom\animal storage.webp"
+                            alt="Mirolam beige macrame stuffed animal storage hammock net hanging in a corner"
+                            class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Bedroom</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Stuffed Animal Storage Hammock</h3>
+                        <div class="product-rating" aria-label="Rated 4.7 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rating-score">4.7</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A handcrafted macrame corner hammock that keeps stuffed animals organized while adding a cozy bohemian accent to bedrooms, nurseries, and playrooms.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>100% cotton macrame net holds a large collection of plush toys</li>
+                            <li>Easy 10-min wall installation with included anchors and hooks</li>
+                        </ul>
+                        <a href="https://amzn.to/3SoIaKW" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="bedroom">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Bedroom\stain sheet.webp"
+                            alt="BEDELITE satin sheets queen size bed set in black silky smooth fabric"
+                            class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Bedroom</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">BEDELITE Satin Sheets Queen Set</h3>
+                        <div class="product-rating" aria-label="Rated 4.3 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.3</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A luxury 4-piece satin sheet set in deep black with a silky smooth finish that elevates the look and feel of any bedroom.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>4-piece set includes flat sheet, fitted sheet &amp; 2 pillowcases</li>
+                            <li>Luxurious satin weave is soft, breathable, and wrinkle-resistant</li>
+                        </ul>
+                        <a href="https://amzn.to/3Qxh8k4" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="bedroom">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Bedroom\laundary.webp"
+                            alt="Lifewit beige 100L laundry basket with lid and bamboo handles for bedroom"
+                            class="product-image">
+                        <span
+                            class="trend-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Amazon's Choice</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Lifewit 100L Laundry Basket with Lid</h3>
+                        <div class="product-rating" aria-label="Rated 4.4 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                            <span class="rating-score">4.4</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A large beige laundry hamper with bamboo handles and a removable inner bag that keeps bedroom clutter hidden while adding a clean, modern look.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>100L capacity holds 2-2.5 loads of laundry with ease</li>
+                            <li>Removable machine-washable inner bag with odor-blocking lid</li>
+                        </ul>
+                        <a href="https://amzn.to/4xMxJRQ" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+                <article class="product-card group reveal" data-category="kitchen">
+                    <div class="product-media aspect-[4/3]">
+                        <img src="images\Products\Kitchen\wood wall shelves.webp"
+                            alt="QEEIG set of 3 rustic brown floating shelves mounted on a kitchen wall" class="product-image">
+                        <span
+                            class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Kitchen</span>
+                    </div>
+                    <div class="product-content p-6">
+                        <h3 class="product-title font-serif">Floating Wall Shelves Set of 3</h3>
+                        <div class="product-rating" aria-label="Rated 4.7 out of 5">
+                            <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rating-score">4.7</span>
+                        </div>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A set of 3 rustic brown floating shelves with invisible brackets, perfect for kitchen decor, spices, and small essentials.</p>
+                        <ul class="product-highlights mt-5">
+                            <li>Invisible bracket design for a clean, modern farmhouse look</li>
+                            <li>Holds up to 25 lbs each — sturdy enough for books and decor</li>
+                        </ul>
+                        <a href="https://amzn.to/4oL9cZe" class="premium-cta" target="_blank"
+                            rel="noopener sponsored">View on Amazon</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="mt-14 text-center">
+                <a href="#"
+                    class="inline-flex min-h-14 items-center justify-center rounded-full border border-[#1A1A1A] bg-transparent px-10 text-[11px] font-bold uppercase tracking-[0.18em] text-[#1A1A1A] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1A1A1A] hover:text-white hover:shadow-2xl">
+                    Discover More 2026 Finds
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="finds-legacy" class="hidden py-24 bg-white" aria-hidden="true">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <span class="text-beige-dark uppercase tracking-widest text-xs font-bold mb-2 block">The
+                        Shortlist</span>
+                    <h2 class="text-4xl md:text-5xl font-serif">Featured Amazon Finds</h2>
+                </div>
+                <p class="text-neutral-500 max-w-sm font-light">
+                    Meticulously curated premium decor pieces that look designer but stay within budget.
+                </p>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12" id="legacy-product-grid">
+                <!-- Product Card Template (Will be duplicated for 12 items) -->
+                <!-- Item 1 -->
+                <div class="product-card group reveal">
+                    <div
+                        class="decor-image-box relative overflow-hidden rounded-xl bg-beige-light aspect-[3/4] mb-4 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=800&auto=format&fit=crop"
+                            alt="Nordic Vase"
+                            class="product-image w-full h-full object-cover transition-transform duration-500">
+                        <div
+                            class="absolute top-4 right-4 glass px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                            Trending</div>
+                    </div>
+                    <div class="product-details">
+                        <div class="flex justify-between items-start mb-2 gap-3">
+                            <h3 class="text-lg font-serif">Minimalist Ceramic Nordic Vase</h3>
+                            <div class="flex text-yellow-500 scale-75 origin-right shrink-0">★★★★★</div>
+                        </div>
+                        <p class="text-sm text-neutral-500 mb-3 font-light leading-relaxed">
+                            Handcrafted matte finish ceramic vase perfect for pampas grass arrangements.
+                        </p>
+                        <p class="short-benefit">Turns empty shelves into calm, curated statement moments.</p>
+                        <p class="love-label">Why people love it</p>
+                        <ul class="love-list">
+                            <li>Soft Nordic shape with a premium matte finish</li>
+                            <li>Perfect for pampas, stems, or standalone styling</li>
+                            <li>Easy to place on shelves, consoles, and nightstands</li>
+                        </ul>
+                        <a href="#" class="premium-cta">
+                            View on Amazon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="product-card group reveal">
+                    <div
+                        class="decor-image-box relative overflow-hidden rounded-xl bg-beige-light aspect-[3/4] mb-4 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1544450297-f34a04e4053c?q=80&w=800&auto=format&fit=crop"
+                            alt="Velvet Cushion"
+                            class="product-image w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="product-details">
+                        <div class="flex justify-between items-start mb-2 gap-3">
+                            <h3 class="text-lg font-serif">Premium Velvet Throw Pillows</h3>
+                            <div class="flex text-yellow-500 scale-75 origin-right shrink-0">★★★★☆</div>
+                        </div>
+                        <p class="text-sm text-neutral-500 mb-3 font-light leading-relaxed">
+                            Ultra-soft luxury velvet covers in earthy tones to elevate your sofa aesthetic.
+                        </p>
+                        <p class="short-benefit">Makes your sofa feel warmer, softer, and instantly styled.</p>
+                        <p class="love-label">Why people love it</p>
+                        <ul class="love-list">
+                            <li>Rich velvet texture adds a designer layer</li>
+                            <li>Earthy tones blend with modern neutral rooms</li>
+                            <li>Quick refresh for sofas, beds, and reading chairs</li>
+                        </ul>
+                        <a href="#" class="premium-cta">
+                            Shop This Look
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="product-card group reveal">
+                    <div
+                        class="decor-image-box relative overflow-hidden rounded-xl bg-beige-light aspect-[3/4] mb-4 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1513519107127-1bed33748e4c?q=80&w=800&auto=format&fit=crop"
+                            alt="Task Lamp"
+                            class="product-image w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="product-details">
+                        <div class="flex justify-between items-start mb-2 gap-3">
+                            <h3 class="text-lg font-serif">Antique Brass Reading Lamp</h3>
+                            <div class="flex text-yellow-500 scale-75 origin-right shrink-0">★★★★★</div>
+                        </div>
+                        <p class="text-sm text-neutral-500 mb-3 font-light leading-relaxed">
+                            Sophisticated metal task lamp with adjustable neck for a modern workspace.
+                        </p>
+                        <p class="short-benefit">Adds warm focused light for slow evenings and polished desks.</p>
+                        <p class="love-label">Why people love it</p>
+                        <ul class="love-list">
+                            <li>Antique brass finish feels timeless and refined</li>
+                            <li>Adjustable neck keeps lighting practical</li>
+                            <li>Ideal for desks, bedside tables, and cozy corners</li>
+                        </ul>
+                        <a href="#" class="premium-cta">
+                            See Latest Price
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="product-card group reveal">
+                    <div
+                        class="decor-image-box relative overflow-hidden rounded-xl bg-beige-light aspect-[3/4] mb-4 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1594913785162-e6785b426cb7?q=80&w=800&auto=format&fit=crop"
+                            alt="Luxury Candle"
+                            class="product-image w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="product-details">
+                        <div class="flex justify-between items-start mb-2 gap-3">
+                            <h3 class="text-lg font-serif">Scented Soy Wax Therapy Candle</h3>
+                            <div class="flex text-yellow-500 scale-75 origin-right shrink-0">★★★★★</div>
+                        </div>
+                        <p class="text-sm text-neutral-500 mb-3 font-light leading-relaxed">
+                            Premium essential oil blends in a chic smoked glass jar for ultimate relaxation.
+                        </p>
+                        <p class="short-benefit">Creates a spa-like glow that makes nights feel softer.</p>
+                        <p class="love-label">Why people love it</p>
+                        <ul class="love-list">
+                            <li>Smoked glass jar looks elegant on any tray</li>
+                            <li>Essential oil blend adds a relaxing mood</li>
+                            <li>Perfect for bath shelves and bedside styling</li>
+                        </ul>
+                        <a href="#" class="premium-cta">
+                            Explore Decor
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Duplicating products for grid visual completeness -->
+                <!-- Item 5 -->
+                <div class="product-card group reveal">
+                    <div
+                        class="decor-image-box relative overflow-hidden rounded-xl bg-beige-light aspect-[3/4] mb-4 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800&auto=format&fit=crop"
+                            alt="Chair"
+                            class="product-image w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="text-lg font-serif mb-1">Rattan Accent Armchair</h3>
+                        <div class="flex text-yellow-500 scale-75 origin-left mb-2">★★★★★</div>
+                        <p class="text-sm text-neutral-500 mb-3 font-light leading-relaxed line-clamp-2">
+                            Natural rattan weaving with solid oak frame for a Scandinavian touch.
+                        </p>
+                        <p class="short-benefit">Transforms a quiet corner into a breezy designer nook.</p>
+                        <p class="love-label">Why people love it</p>
+                        <ul class="love-list">
+                            <li>Natural woven texture brings warmth without clutter</li>
+                            <li>Statement seating for small living spaces</li>
+                            <li>Fits Scandinavian, coastal, and organic modern rooms</li>
+                        </ul>
+                        <a href="#" class="premium-cta">
+                            Get This Style
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Add more as needed placeholders -->
+                <!-- Item 6 -->
+                <div class="product-card group reveal">
+                    <div
+                        class="decor-image-box relative overflow-hidden rounded-xl bg-beige-light aspect-[3/4] mb-4 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5db?q=80&w=800&auto=format&fit=crop"
+                            alt="Mirror"
+                            class="product-image w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="text-lg font-serif mb-1">Ornate Gold Wall Mirror</h3>
+                        <div class="flex text-yellow-500 scale-75 origin-left mb-2">★★★★☆</div>
+                        <p class="text-sm text-neutral-500 mb-3 font-light leading-relaxed line-clamp-2">
+                            Vintage-inspired Baroque frame to add depth and luxury to any hallway.
+                        </p>
+                        <p class="short-benefit">Makes narrow walls feel brighter, grander, and more romantic.</p>
+                        <p class="love-label">Why people love it</p>
+                        <ul class="love-list">
+                            <li>Gold frame adds an old-money accent</li>
+                            <li>Reflects light to visually open small spaces</li>
+                            <li>Beautiful above consoles, vanities, and mantels</li>
+                        </ul>
+                        <a href="#" class="premium-cta">
+                            View on Amazon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="product-card group reveal">
+                    <div
+                        class="decor-image-box relative overflow-hidden rounded-xl bg-beige-light aspect-[3/4] mb-4 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1594913785202-480112702130?q=80&w=800&auto=format&fit=crop"
+                            alt="Art"
+                            class="product-image w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="text-lg font-serif mb-1">Abstract Canvas Wall Art</h3>
+                        <div class="flex text-yellow-500 scale-75 origin-left mb-2">★★★★★</div>
+                        <p class="text-sm text-neutral-500 mb-3 font-light leading-relaxed line-clamp-2">
+                            Hand-painted textures with muted gold leaf accents.
+                        </p>
+                        <p class="short-benefit">Gives blank walls a gallery feel without overwhelming the room.</p>
+                        <p class="love-label">Why people love it</p>
+                        <ul class="love-list">
+                            <li>Textured neutrals feel calm and expensive</li>
+                            <li>Gold accents pair beautifully with modern decor</li>
+                            <li>Instant focal point for bedrooms and living rooms</li>
+                        </ul>
+                        <a href="#" class="premium-cta">
+                            Shop This Look
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="product-card group reveal">
+                    <div
+                        class="decor-image-box relative overflow-hidden rounded-xl bg-beige-light aspect-[3/4] mb-4 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1581781870027-04212e231e96?q=80&w=800&auto=format&fit=crop"
+                            alt="Planter"
+                            class="product-image w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="text-lg font-serif mb-1">Modern Footed Planter</h3>
+                        <div class="flex text-yellow-500 scale-75 origin-left mb-2">★★★★★</div>
+                        <p class="text-sm text-neutral-500 mb-3 font-light leading-relaxed line-clamp-2">
+                            Mid-century stand with ceramic pot for indoor greenery.
+                        </p>
+                        <p class="short-benefit">Lifts greenery beautifully so rooms feel fresher and more alive.</p>
+                        <p class="love-label">Why people love it</p>
+                        <ul class="love-list">
+                            <li>Footed profile adds height without taking much space</li>
+                            <li>Clean ceramic pot works with any color palette</li>
+                            <li>Great for Pinterest-inspired plant corners</li>
+                        </ul>
+                        <a href="#" class="premium-cta">
+                            See Latest Price
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <button
+                    class="bg-luxury-black text-white px-12 py-5 rounded-full text-xs font-bold uppercase tracking-widest shadow-2xl hover:scale-105 transition-transform">
+                    Discover More 2026 Finds
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PINTEREST-INSPIRED MASONRY GALLERY -->
+    <section id="inspiration" class="py-24 bg-beige-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-beige-dark uppercase tracking-widest text-xs font-bold mb-2 block">Interior
+                    Aesthetics</span>
+                <h2 class="text-4xl md:text-5xl font-serif">Inspiration Gallery</h2>
+            </div>
+
+            <div class="masonry-grid space-y-4">
+                <div class="decor-image-box overflow-hidden rounded-2xl reveal">
+                    <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=800&auto=format"
+                        alt="Aesthetic Space" class="w-full hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="decor-image-box overflow-hidden rounded-2xl reveal">
+                    <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=800&auto=format"
+                        alt="Scrapbook" class="w-full hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="decor-image-box overflow-hidden rounded-2xl reveal">
+                    <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=800&auto=format"
+                        alt="Modern Room" class="w-full hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="decor-image-box overflow-hidden rounded-2xl reveal">
+                    <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=800&auto=format"
+                        alt="Shelfie" class="w-full hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="decor-image-box overflow-hidden rounded-2xl reveal">
+                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7eaa511?q=80&w=800&auto=format"
+                        alt="Cozy Bedroom" class="w-full hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="decor-image-box overflow-hidden rounded-2xl reveal">
+                    <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?q=80&w=800&auto=format"
+                        alt="Scandinavian Living" class="w-full hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY PEOPLE LOVE THESE FINDS SECTION -->
+    <section class="py-24 bg-white border-b border-beige">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-12 text-center">
+                <div class="flex flex-col items-center reveal">
+                    <div class="w-16 h-16 bg-beige-light rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="tag" class="text-beige-dark w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-serif text-xl mb-3">Budget Friendly</h4>
+                    <p class="text-sm text-neutral-400 font-light">Designer looks for high-street prices.</p>
+                </div>
+                <div class="flex flex-col items-center reveal" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 bg-beige-light rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="sparkles" class="text-beige-dark w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-serif text-xl mb-3">Aesthetic Design</h4>
+                    <p class="text-sm text-neutral-400 font-light">Curated for modern minimalists.</p>
+                </div>
+                <div class="flex flex-col items-center reveal" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-beige-light rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="layout" class="text-beige-dark w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-serif text-xl mb-3">Space Saving</h4>
+                    <p class="text-sm text-neutral-400 font-light">Smart solutions for any room size.</p>
+                </div>
+                <div class="flex flex-col items-center reveal" style="transition-delay: 0.3s;">
+                    <div class="w-16 h-16 bg-beige-light rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="pin" class="text-beige-dark w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-serif text-xl mb-3">Pinterest Trending</h4>
+                    <p class="text-sm text-neutral-400 font-light">As seen in top aesthetic boards.</p>
+                </div>
+                <div class="flex flex-col items-center reveal" style="transition-delay: 0.4s;">
+                    <div class="w-16 h-16 bg-beige-light rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="award" class="text-beige-dark w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-serif text-xl mb-3">Modern Luxury</h4>
+                    <p class="text-sm text-neutral-400 font-light">Elevating every day home life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMAIL SUBSCRIBE SECTION -->
+    <section class="py-24 bg-beige-light">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto glass rounded-3xl p-12 md:p-20 text-center relative overflow-hidden">
+                <div class="absolute -top-24 -left-24 w-64 h-64 bg-beige-dark opacity-10 rounded-full"></div>
+                <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-beige-dark opacity-10 rounded-full"></div>
+
+                <h2 class="text-4xl md:text-5xl font-serif mb-6 relative z-10">Get Weekly Home Decor Finds</h2>
+                <p class="text-neutral-500 mb-10 max-w-lg mx-auto relative z-10 font-light">
+                    Join 12k+ decor enthusiasts. Receive a curated list of aesthetic Amazon arrivals every Sunday.
+                </p>
+
+                <form id="subscribe-form" class="flex flex-col md:flex-row gap-4 relative z-10 max-w-md mx-auto">
+                    <input type="email" placeholder="Your email address" required
+                        class="flex-1 px-8 py-5 rounded-full bg-white border border-beige-light outline-none focus:ring-2 focus:ring-beige-dark transition-all">
+                    <button type="submit"
+                        class="bg-luxury-black text-white px-10 py-5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-neutral-accent transition-all whitespace-nowrap">
+                        Subscribe
+                    </button>
+                </form>
+                <div id="form-message" class="mt-6 text-sm text-luxury-black font-medium hidden">
+                    Thank you! Your aesthetic journey begins next Sunday.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER & DISCLOSURE -->
+    <footer class="bg-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <!-- Branding -->
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#" class="inline-flex items-center mb-6" aria-label="Luxe Spaces home">
+                        <img src="images/logo%20horizontal%20remove%20bg.png" alt="Luxe Spaces" class="footer-logo">
+                    </a>
+                    <p class="text-sm text-neutral-400 font-light mb-8">
+                        Curating the world's most beautiful, affordable Amazon decor finds for the modern, aesthetic
+                        home.
+                    </p>
+                    <div class="flex space-x-6 text-neutral-400">
+                        <a href="#" class="hover:text-beige-dark transition-colors"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="hover:text-beige-dark transition-colors"><i data-lucide="map-pin"></i></a>
+                        <a href="#" class="hover:text-beige-dark transition-colors"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-widest mb-8">Shop Categories</h5>
+                    <ul class="space-y-4 text-sm text-neutral-500 font-light">
+                        <li><a href="#" class="hover:text-luxury-black">Bedroom</a></li>
+                        <li><a href="#" class="hover:text-luxury-black">Living Room</a></li>
+                        <li><a href="#" class="hover:text-luxury-black">Home Office</a></li>
+                        <li><a href="#" class="hover:text-luxury-black">Kitchen & Dining</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-widest mb-8">Helpful Links</h5>
+                    <ul class="space-y-4 text-sm text-neutral-500 font-light">
+                        <li><a href="#" class="hover:text-luxury-black">About Us</a></li>
+                        <li><a href="#" class="hover:text-luxury-black">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-luxury-black">Contact</a></li>
+                        <li><a href="#" class="hover:text-luxury-black">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Disclosures -->
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-widest mb-8">Legal Disclaimer</h5>
+                    <p class="text-[10px] text-neutral-400 font-light leading-relaxed mb-4">
+                        As an Amazon Associate, we earn from qualifying purchases. This means if you click on a link and
+                        make a purchase, we may receive a small commission at no extra cost to you.
+                    </p>
+                    <p class="text-[10px] text-neutral-400 font-light leading-relaxed">
+                        &copy; 2026 LUXE SPACES. All aesthetic rights reserved.
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-beige pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex space-x-8 text-[11px] font-bold uppercase tracking-widest text-neutral-400">
+                    <a href="#" class="hover:text-luxury-black transition-colors">Affiliate Disclosure</a>
+                    <a href="#" class="hover:text-luxury-black transition-colors">Terms of Service</a>
+                </div>
+                <div class="text-[11px] font-bold uppercase tracking-widest text-neutral-400">
+                    Made with <span class="text-beige-dark italic">Sophistication</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2', 'shadow-md');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2', 'shadow-md');
+            }
+        });
+
+        // Reveal Animations on Scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Featured finds category filtering
+        const filterButtons = document.querySelectorAll('.filter-pill');
+        const productCards = document.querySelectorAll('#product-grid .product-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedCategory = button.dataset.filter;
+
+                filterButtons.forEach(filterButton => {
+                    filterButton.classList.toggle('active', filterButton === button);
+                });
+
+                productCards.forEach(card => {
+                    const shouldShow = selectedCategory === 'all' || card.dataset.category === selectedCategory;
+                    card.classList.toggle('is-hidden', !shouldShow);
+                });
+            });
+        });
+
+        // Form Submission Simulation
+        document.getElementById('subscribe-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const message = document.getElementById('form-message');
+
+            form.style.opacity = '0';
+            setTimeout(() => {
+                form.style.display = 'none';
+                message.classList.remove('hidden');
+                message.classList.add('animate-fade-in');
+            }, 300);
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOpenIcon = document.getElementById('mobile-menu-open-icon');
+        const mobileMenuCloseIcon = document.getElementById('mobile-menu-close-icon');
+
+        const setMobileMenuOpen = (isOpen) => {
+            mobileMenu.classList.toggle('hidden', !isOpen);
+            mobileMenuBtn.setAttribute('aria-expanded', isOpen.toString());
+            mobileMenuBtn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+            mobileMenuOpenIcon.classList.toggle('hidden', isOpen);
+            mobileMenuCloseIcon.classList.toggle('hidden', !isOpen);
+        };
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            setMobileMenuOpen(!isOpen);
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => setMobileMenuOpen(false));
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                setMobileMenuOpen(false);
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                setMobileMenuOpen(false);
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                setMobileMenuOpen(false);
+            }
+        });
+    </script>
+</body>
+
+</html>
