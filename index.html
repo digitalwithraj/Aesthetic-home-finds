@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO & Metadata -->
-    <title>Luxury Home Decor Finds | Curated Amazon Minimalist Aesthetics</title>
+    <title>Aesthetic Home Finds | Curated Amazon Home Decor & Minimalist Aesthetics</title>
     <meta name="description"
         content="Explore our handpicked collection of luxury Amazon home decor. Elevate your living space with aesthetic, Pinterest-ready furniture, lighting, and minimalist essentials.">
     <meta name="keywords"
         content="Amazon Home Decor, Luxury Interior Design, Minimalist Home, Aesthetic Bedroom, Pinterest Home Finds">
 
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Luxury Home Decor Finds | Aesthetic Amazon Picks">
+    <meta property="og:title" content="Aesthetic Home Finds | Curated Amazon Home Decor">
     <meta property="og:description"
         content="Handpicked Amazon home decor products to elevate your living space. Discover aesthetic and high-end finds for every room.">
     <meta property="og:image"
@@ -352,16 +352,397 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .affiliate-disclosure {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 60;
+            background: rgba(26, 26, 26, 0.92);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.65rem;
+            letter-spacing: 0.08em;
+            text-align: center;
+            padding: 0.45rem 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 40;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background: rgba(26, 26, 26, 0.85);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .back-to-top:hover {
+            background: #1A1A1A;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+        }
+
+        .hero-trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            letter-spacing: 0.04em;
+        }
+
+        .premium-hero {
+            position: relative;
+            min-height: 100svh;
+            overflow: hidden;
+            isolation: isolate;
+            background: #1a1612;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .premium-hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transform: scale(1);
+            animation: premiumHeroZoom 20s ease-in-out infinite alternate;
+            will-change: transform;
+        }
+
+        .premium-hero::before {
+            content: "";
+            position: absolute;
+            inset: -20% -12%;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.44;
+            background:
+                linear-gradient(112deg, transparent 18%, rgba(255, 255, 255, 0.16) 40%, transparent 58%),
+                linear-gradient(132deg, transparent 56%, rgba(255, 230, 187, 0.16) 66%, transparent 78%);
+            transform: translateX(-18%) rotate(0.001deg);
+            animation: premiumLightSweep 8s ease-in-out infinite;
+        }
+
+        .premium-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background:
+                radial-gradient(circle at 72% 46%, rgba(255, 255, 255, 0.1) 0%, rgba(26, 22, 18, 0.1) 32%, rgba(10, 9, 8, 0.52) 100%),
+                linear-gradient(90deg, rgba(9, 8, 7, 0.84) 0%, rgba(16, 14, 12, 0.62) 42%, rgba(16, 14, 12, 0.18) 100%),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(9, 8, 7, 0.38) 100%);
+        }
+
+        .premium-hero-content {
+            position: relative;
+            z-index: 2;
+            min-height: 100svh;
+            align-items: center;
+            padding-top: 8rem;
+            padding-bottom: 5rem;
+        }
+
+        .premium-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.48rem 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .hero-premium-cta {
+            transform: translate3d(0, 0, 0);
+            transition: transform 300ms ease, box-shadow 300ms ease, background 300ms ease, border-color 300ms ease;
+        }
+
+        .hero-premium-cta:hover {
+            transform: scale(1.04) translate3d(0, 0, 0);
+            box-shadow: 0 22px 54px rgba(255, 255, 255, 0.18), 0 12px 34px rgba(0, 0, 0, 0.24);
+        }
+
+        .premium-parallax-shell {
+            transform: translate3d(var(--px, 0px), var(--py, 0px), 0);
+            transition: transform 160ms ease-out;
+            will-change: transform;
+        }
+
+        .premium-float-shell {
+            animation: premiumFloat 7s ease-in-out infinite;
+            transform: translate3d(0, 0, 0);
+            will-change: transform;
+        }
+
+        .premium-glass-card {
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.75);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transform: translate3d(0, 0, 0);
+            transition: transform 300ms ease, box-shadow 300ms ease, background 300ms ease;
+            will-change: transform;
+        }
+
+        .premium-glass-card:hover {
+            transform: translate3d(0, -8px, 0);
+            box-shadow: 0 38px 96px rgba(0, 0, 0, 0.24);
+            background: rgba(255, 255, 255, 0.82);
+        }
+
+        .premium-orbit-line {
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.42), transparent);
+        }
+
+        .premium-scroll-cue {
+            position: absolute;
+            left: 50%;
+            bottom: 1.6rem;
+            z-index: 3;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .premium-gallery-section {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 18% 8%, rgba(255, 255, 255, 0.78), transparent 28%),
+                linear-gradient(180deg, #f7f2eb 0%, #efe7dd 100%);
+        }
+
+        .premium-gallery-grid {
+            column-count: 2;
+            column-gap: 12px;
+        }
+
+        .premium-gallery-item {
+            display: inline-block;
+            width: 100%;
+            margin: 0 0 12px;
+            break-inside: avoid;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .premium-gallery-card {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(139, 115, 85, 0.18);
+            border-radius: 22px;
+            background: rgba(255, 252, 246, 0.74);
+            box-shadow: 0 20px 54px rgba(63, 48, 33, 0.1);
+            cursor: pointer;
+            transform: translate3d(0, 0, 0);
+            transition: transform 350ms ease, box-shadow 350ms ease, border-color 350ms ease;
+            will-change: transform;
+        }
+
+        .premium-gallery-card:hover {
+            transform: translate3d(0, -6px, 0) scale(1.04);
+            border-color: rgba(212, 165, 116, 0.34);
+            box-shadow: 0 34px 86px rgba(63, 48, 33, 0.2);
+        }
+
+        .premium-gallery-card img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transform: translate3d(0, 0, 0);
+            transition: filter 350ms ease;
+        }
+
+        .premium-gallery-card:hover img {
+            filter: brightness(1.08);
+        }
+
+        .premium-gallery-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            padding: 1rem;
+            background: linear-gradient(180deg, rgba(26, 26, 26, 0.22), transparent 44%, rgba(26, 26, 26, 0.12));
+            opacity: 0;
+            transition: opacity 350ms ease;
+            pointer-events: none;
+        }
+
+        .premium-gallery-card:hover .premium-gallery-overlay {
+            opacity: 1;
+        }
+
+        .premium-gallery-expand {
+            display: inline-flex;
+            height: 2.35rem;
+            width: 2.35rem;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.32);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.78);
+            color: #1A1A1A;
+            box-shadow: 0 12px 30px rgba(26, 26, 26, 0.16);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .premium-gallery-modal-image {
+            max-height: 74vh;
+            width: auto;
+            max-width: min(1100px, calc(100vw - 2rem));
+            object-fit: contain;
+            border-radius: 26px;
+            box-shadow: 0 40px 120px rgba(0, 0, 0, 0.34);
+        }
+
+        .premium-gallery-modal-button {
+            display: inline-flex;
+            min-height: 2.75rem;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            transition: transform 300ms ease, background 300ms ease;
+        }
+
+        .premium-gallery-modal-button:hover {
+            transform: translate3d(0, -2px, 0);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        @media (min-width: 768px) {
+            .premium-gallery-grid {
+                column-count: 3;
+                column-gap: 16px;
+            }
+
+            .premium-gallery-item {
+                margin-bottom: 16px;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .premium-gallery-grid {
+                column-count: 4;
+                column-gap: 20px;
+            }
+
+            .premium-gallery-item {
+                margin-bottom: 20px;
+            }
+        }
+
+        @keyframes premiumLightSweep {
+            0%,
+            100% {
+                transform: translateX(-20%) rotate(0.001deg);
+            }
+
+            48% {
+                transform: translateX(12%) rotate(0.001deg);
+            }
+        }
+
+        @keyframes premiumHeroZoom {
+            0% {
+                transform: scale(1) translate3d(0, 0, 0);
+            }
+
+            100% {
+                transform: scale(1.05) translate3d(-0.8%, -0.6%, 0);
+            }
+        }
+
+        @keyframes premiumFloat {
+            0%,
+            100% {
+                transform: translate3d(0, -10px, 0);
+            }
+
+            50% {
+                transform: translate3d(0, 10px, 0);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .premium-hero::before,
+            .premium-hero-bg,
+            .premium-float-shell {
+                animation: none;
+            }
+
+            .premium-parallax-shell,
+            .premium-glass-card,
+            .hero-premium-cta {
+                transition: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .premium-hero::after {
+                background:
+                    linear-gradient(180deg, rgba(9, 8, 7, 0.72) 0%, rgba(9, 8, 7, 0.58) 56%, rgba(9, 8, 7, 0.74) 100%);
+            }
+
+            .premium-hero-content {
+                padding-top: 7.25rem;
+                padding-bottom: 4.75rem;
+            }
+        }
     </style>
 </head>
 
 <body class="bg-white text-luxury-black font-sans selection:bg-beige-dark selection:text-white">
 
     <!-- STICKY NAVIGATION BAR -->
-    <nav class="fixed top-0 w-full z-50 glass py-4 transition-all duration-300" id="navbar">
+    <nav class="fixed top-[26px] w-full z-50 glass py-4 transition-all duration-300" id="navbar">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#" class="inline-flex items-center" aria-label="Luxe Spaces home">
-                <img src="images/logo%20horizontal%20remove%20bg.png" alt="Luxe Spaces" class="site-logo">
+            <a href="#home" class="inline-flex items-center" aria-label="Aesthetic Home Finds home">
+                <img src="images/logo%20horizontal%20remove%20bg.png" alt="Aesthetic Home Finds" class="site-logo">
             </a>
 
             <div class="hidden md:flex space-x-8 text-sm font-normal tracking-wide uppercase">
@@ -392,37 +773,31 @@
         </div>
     </nav>
 
+    <!-- AFFILIATE DISCLOSURE -->
+    <div class="affiliate-disclosure">
+        This page contains affiliate links. We may earn a small commission at no extra cost to you.
+    </div>
+
     <!-- HERO SECTION -->
-    <section
-        class="relative min-h-[620px] md:min-h-[720px] lg:min-h-[820px] flex items-center justify-start overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="images\banner 1.webp" alt="Luxury Living Space" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/30"></div>
-        </div>
-
-        <div class="container mx-auto px-6 relative z-10 text-left text-white">
-            <div class="max-w-3xl">
-                <h1 class="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 animate-fade-in opacity-0"
-                    style="animation-delay: 0.2s;">
-                    Make Your Space Feel Effortlessly Luxurious
-                </h1>
-                <p class="text-base md:text-lg font-light mb-10 max-w-2xl animate-fade-in opacity-0"
-                    style="animation-delay: 0.4s;">
-                    Discover curated Amazon home finds inspired by modern Pinterest interiors, cozy living, and elevated
-                    everyday spaces.
-                </p>
-                <a href="#finds"
-                    class="inline-block bg-white text-luxury-black px-8 py-3 rounded-full font-medium uppercase tracking-widest text-xs hover:bg-beige-light transition-all shadow-xl hover:-translate-y-1 animate-fade-in opacity-0"
-                    style="animation-delay: 0.6s;">
-                    Explore Curated Picks
-                </a>
+    <div id="premium-hero-root">
+        <section class="premium-hero" id="home" aria-label="Premium decor landing page">
+            <img src="images/banner%201.webp" alt="Luxury living room decor" class="premium-hero-bg" fetchpriority="high">
+            <div class="premium-hero-content container mx-auto flex min-h-screen items-center px-6 text-white">
+                <div class="max-w-3xl">
+                    <div class="premium-kicker mb-7 w-fit">
+                        <span class="h-1.5 w-1.5 rounded-full bg-white/85"></span>
+                        <span class="text-[11px] font-bold uppercase tracking-[0.22em]">Curated Amazon home edits</span>
+                    </div>
+                    <h1 class="font-serif text-[clamp(3rem,8vw,6.9rem)] leading-[0.92] text-white">Make your space feel effortlessly luxurious.</h1>
+                    <p class="mt-7 max-w-2xl text-base font-light leading-8 text-white/76 md:text-xl">A refined edit of sculptural lighting, warm textures, and elevated everyday decor chosen for homes that look calm, expensive, and deeply lived in.</p>
+                    <div class="mt-10 flex flex-wrap items-center gap-4">
+                        <a href="#finds" class="hero-premium-cta inline-flex min-h-12 items-center justify-center rounded-full bg-white px-7 text-[11px] font-bold uppercase tracking-[0.18em] text-luxury-black shadow-[0_18px_48px_rgba(0,0,0,.24)]">Shop The Edit</a>
+                        <a href="#categories" class="hero-premium-cta inline-flex min-h-12 items-center justify-center rounded-full border border-white/35 px-7 text-[11px] font-bold uppercase tracking-[0.18em] text-white/90">Explore Rooms</a>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-            <i data-lucide="chevron-down" class="text-white w-6 h-6"></i>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- TRENDING CATEGORIES SECTION -->
     <section id="categories" class="py-24 bg-beige-light">
@@ -435,9 +810,10 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Category Card 1 -->
-                <a href="#finds" class="decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
+                <a href="#finds" data-category-filter="bedroom"
+                    class="category-card decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
                     <img src="images\bedroom decor.webp" alt="Bedroom Decor"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                     <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
                         <h3 class="text-2xl font-serif mb-2">Bedroom Decor</h3>
@@ -447,9 +823,10 @@
                 </a>
 
                 <!-- Category Card 2 -->
-                <a href="#finds" class="decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
+                <a href="#finds" data-category-filter="living-room"
+                    class="category-card decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
                     <img src="images\living room decor.webp" alt="Living Room"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                     <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
                         <h3 class="text-2xl font-serif mb-2">Living Room Essentials</h3>
@@ -459,9 +836,10 @@
                 </a>
 
                 <!-- Category Card 3 -->
-                <a href="#finds" class="decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
+                <a href="#finds" data-category-filter="workspace"
+                    class="category-card decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
                     <img src="images\work space decor.webp" alt="Workspace"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                     <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
                         <h3 class="text-2xl font-serif mb-2">Workspace Aesthetics</h3>
@@ -471,9 +849,10 @@
                 </a>
 
                 <!-- Category Card 4 -->
-                <a href="#finds" class="decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
+                <a href="#finds" data-category-filter="kitchen"
+                    class="category-card decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
                     <img src="images\kitchen decor.webp" alt="Kitchen"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                     <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
                         <h3 class="text-2xl font-serif mb-2">Kitchen Decor</h3>
@@ -483,9 +862,10 @@
                 </a>
 
                 <!-- Category Card 5 -->
-                <a href="#finds" class="decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
+                <a href="#finds" data-category-filter="lighting"
+                    class="category-card decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
                     <img src="images\cozy lighting decor.webp" alt="Lighting"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                     <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
                         <h3 class="text-2xl font-serif mb-2">Cozy Lighting</h3>
@@ -495,9 +875,10 @@
                 </a>
 
                 <!-- Category Card 6 -->
-                <a href="#finds" class="decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
+                <a href="#finds" data-category-filter="wall-decor"
+                    class="category-card decor-image-box group relative overflow-hidden rounded-2xl h-[400px] shadow-lg">
                     <img src="images\wall decor.webp" alt="Wall Decor"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                     <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
                         <h3 class="text-2xl font-serif mb-2">Wall Decor</h3>
@@ -537,13 +918,15 @@
                     type="button" data-filter="kitchen">Kitchen</button>
                 <button class="filter-pill rounded-full px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em]"
                     type="button" data-filter="bedroom">Bedroom</button>
+                <button class="filter-pill rounded-full px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em]"
+                    type="button" data-filter="wall-decor">Wall Decor</button>
             </div>
 
             <div class="grid grid-cols-1 gap-7 sm:grid-cols-2 xl:grid-cols-3" id="product-grid">
                 <article class="product-card group reveal" data-category="living-room">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Living room\pillow.webp"
-                            alt="Cream white corduroy throw pillow covers styled on a sofa" class="product-image">
+                            alt="Cream white corduroy throw pillow covers styled on a sofa" class="product-image" loading="lazy">
                         <span
                             class="trend-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Trending</span>
                     </div>
@@ -568,7 +951,7 @@
                 <article class="product-card group reveal" data-category="living-room">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Living room\living room rug.webp"
-                            alt="Neutral textured area rug styled in a modern living room" class="product-image">
+                            alt="Neutral textured area rug styled in a modern living room" class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Living
                             Room</span>
@@ -593,7 +976,7 @@
                 <article class="product-card group reveal" data-category="living-room">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Living room\Curtains.webp"
-                            alt="Cream linen back tab curtain panels for living room windows" class="product-image">
+                            alt="Cream linen back tab curtain panels for living room windows" class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Living
                             Room</span>
@@ -619,7 +1002,7 @@
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Living room\Curtain Tiebacks.webp"
                             alt="Wood bead magnetic curtain tiebacks styled for living room curtains"
-                            class="product-image">
+                            class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Living
                             Room</span>
@@ -644,7 +1027,7 @@
                 <article class="product-card group reveal" data-category="living-room">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Living room\Lamp Set.webp"
-                            alt="Beige and white ceramic table lamps for living room end tables" class="product-image">
+                            alt="Beige and white ceramic table lamps for living room end tables" class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Living
                             Room</span>
@@ -669,7 +1052,7 @@
                 <article class="product-card group reveal" data-category="lighting">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Lighting\3-in-1 Sunset Lamp.webp"
-                            alt="Mubarek ambient lighting mood projector for bedroom decor" class="product-image">
+                            alt="Mubarek ambient lighting mood projector for bedroom decor" class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Lighting</span>
                     </div>
@@ -693,7 +1076,7 @@
                 <article class="product-card group reveal" data-category="lighting">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Lighting\Hanging Picture Fairy Lights.webp"
-                            alt="Hanging picture fairy lights with clips for bedroom wall decor" class="product-image">
+                            alt="Hanging picture fairy lights with clips for bedroom wall decor" class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Lighting</span>
                     </div>
@@ -718,7 +1101,7 @@
                 <article class="product-card group reveal" data-category="lighting">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Lighting\Floor Standing Tall Lamp.webp"
-                            alt="Black dimmable floor standing lamp with linen lampshade" class="product-image">
+                            alt="Black dimmable floor standing lamp with linen lampshade" class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Lighting</span>
                     </div>
@@ -742,7 +1125,7 @@
                 <article class="product-card group reveal" data-category="lighting">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Lighting\Wireless Wall Lights.webp"
-                            alt="Gold rechargeable wall sconces with white shades" class="product-image">
+                            alt="Gold rechargeable wall sconces with white shades" class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Lighting</span>
                     </div>
@@ -767,7 +1150,7 @@
                 <article class="product-card group reveal" data-category="lighting">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Lighting\Lamp Projector.webp"
-                            alt="Neroupe sunset lamp projector with multicolor LED light" class="product-image">
+                            alt="Neroupe sunset lamp projector with multicolor LED light" class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Lighting</span>
                     </div>
@@ -793,7 +1176,7 @@
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Lighting\LED shower lamp.webp"
                             alt="Growalleter 16-Color LED projection lamp on a nightstand with ambient glow"
-                            class="product-image">
+                            class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Lighting</span>
                     </div>
@@ -818,7 +1201,7 @@
                 <article class="product-card group reveal" data-category="living-room">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Living room\Ceramic Vase.webp"
-                            alt="Pearl white heart shaped ceramic vase set for living room decor" class="product-image">
+                            alt="Pearl white heart shaped ceramic vase set for living room decor" class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Living
                             Room</span>
@@ -844,7 +1227,7 @@
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Workspace\dual monitor stand.webp"
                             alt="gianotter dual monitor stand riser with drawer and pen holders on a desk"
-                            class="product-image">
+                            class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Workspace</span>
                     </div>
@@ -859,7 +1242,7 @@
                             workspace clean and organized.</p>
                         <ul class="product-highlights mt-5">
                             <li>Built-in drawer and 2 magnetic pen holders for desk organization</li>
-                            <li>No assembly required — unbox and place for instant ergonomic setup</li>
+                            <li>No assembly required â€” unbox and place for instant ergonomic setup</li>
                         </ul>
                         <a href="https://amzn.to/4uI6GEk" class="premium-cta" target="_blank"
                             rel="noopener sponsored">View on Amazon</a>
@@ -870,7 +1253,7 @@
                     <div class="product-media aspect-[4/3]" style="background-color: #f0ebe4;">
                         <img src="images\Products\Workspace\Abstract sculpture statue.webp"
                             alt="Ozzptuu sandstone resin thinker style abstract sculpture on a desk"
-                            class="product-image" style="object-fit: contain;">
+                            class="product-image" loading="lazy" style="object-fit: contain;">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Workspace</span>
                     </div>
@@ -896,7 +1279,7 @@
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Workspace\desk.webp"
                             alt="Height adjustable standing desk with natural wood top and white steel frame"
-                            class="product-image">
+                            class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Workspace</span>
                     </div>
@@ -922,7 +1305,7 @@
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Workspace\desk 2.webp"
                             alt="Modern industrial writing desk with walnut wood top and black metal frame"
-                            class="product-image">
+                            class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Workspace</span>
                     </div>
@@ -944,11 +1327,11 @@
                     </div>
                 </article>
 
-                <article class="product-card group reveal" data-category="workspace">
+                <article class="product-card group reveal" data-category="workspace wall-decor">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Workspace\wooden board.webp"
                             alt="U Brands cork bulletin board with birch wood frame mounted above a workspace desk"
-                            class="product-image">
+                            class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Workspace</span>
                     </div>
@@ -970,11 +1353,11 @@
                     </div>
                     </article>
 
-                <article class="product-card group reveal" data-category="workspace">
+                <article class="product-card group reveal" data-category="workspace wall-decor">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Workspace\shelf.webp"
                             alt="Furinno ROSSI 5-tier zigzag corner floating shelf mounted on a wall in espresso finish"
-                            class="product-image">
+                            class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Workspace</span>
                     </div>
@@ -997,7 +1380,7 @@
                 <article class="product-card group reveal" data-category="kitchen">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Kitchen\coasters.webp"
-                            alt="Lazebox cotton woven coaster set of 8 for drinks on a coffee table" class="product-image">
+                            alt="Lazebox cotton woven coaster set of 8 for drinks on a coffee table" class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Kitchen</span>
                     </div>
@@ -1020,7 +1403,7 @@
                 <article class="product-card group reveal" data-category="kitchen">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Kitchen\organizer.webp"
-                            alt="Ukeetap extra large expandable black silverware organizer in a kitchen drawer" class="product-image">
+                            alt="Ukeetap extra large expandable black silverware organizer in a kitchen drawer" class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Kitchen</span>
                     </div>
@@ -1043,7 +1426,7 @@
                 <article class="product-card group reveal" data-category="kitchen">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Kitchen\ceramic flower vases.webp"
-                            alt="Vintage ceramic vase set of 3 in green and beige chinoiserie style" class="product-image">
+                            alt="Vintage ceramic vase set of 3 in green and beige chinoiserie style" class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Kitchen</span>
                     </div>
@@ -1066,7 +1449,7 @@
                 <article class="product-card group reveal" data-category="kitchen">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Kitchen\kinfe.webp"
-                            alt="Martha Stewart Eastwalk 14 piece linen white knife block set on a kitchen counter" class="product-image">
+                            alt="Martha Stewart Eastwalk 14 piece linen white knife block set on a kitchen counter" class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Kitchen</span>
                     </div>
@@ -1089,7 +1472,7 @@
                 <article class="product-card group reveal" data-category="kitchen">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Kitchen\washable runner.webp"
-                            alt="Beige washable runner rug with non-slip backing for kitchen hallway" class="product-image">
+                            alt="Beige washable runner rug with non-slip backing for kitchen hallway" class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Kitchen</span>
                     </div>
@@ -1113,7 +1496,7 @@
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Bedroom\comforter set.webp"
                             alt="Monbix olive green queen comforter set with 7 pieces bed in a bag bedding"
-                            class="product-image">
+                            class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Bedroom</span>
                     </div>
@@ -1137,7 +1520,7 @@
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Bedroom\bedroom stand.webp"
                             alt="Lazzanto black nightstand with LED light strip and charging station for bedroom"
-                            class="product-image">
+                            class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Bedroom</span>
                     </div>
@@ -1147,7 +1530,7 @@
                             <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
                             <span class="rating-score">4.4</span>
                         </div>
-                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A modern nightstand with built-in LED light strip, USB ports, AC outlets, and 2 fabric drawers — perfect for keeping bedside essentials charged and organized.</p>
+                        <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A modern nightstand with built-in LED light strip, USB ports, AC outlets, and 2 fabric drawers â€” perfect for keeping bedside essentials charged and organized.</p>
                         <ul class="product-highlights mt-5">
                             <li>Smart LED light strip with app, voice, and music sync control</li>
                             <li>2 USB ports &amp; 2 AC outlets for clutter-free charging</li>
@@ -1161,7 +1544,7 @@
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Bedroom\water fountain.webp"
                             alt="Homedics Silver Springs tabletop water fountain with 3-tier waterfall and LED light"
-                            class="product-image">
+                            class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Bedroom</span>
                     </div>
@@ -1185,7 +1568,7 @@
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Bedroom\animal storage.webp"
                             alt="Mirolam beige macrame stuffed animal storage hammock net hanging in a corner"
-                            class="product-image">
+                            class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Bedroom</span>
                     </div>
@@ -1209,7 +1592,7 @@
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Bedroom\stain sheet.webp"
                             alt="BEDELITE satin sheets queen size bed set in black silky smooth fabric"
-                            class="product-image">
+                            class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Bedroom</span>
                     </div>
@@ -1233,7 +1616,7 @@
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Bedroom\laundary.webp"
                             alt="Lifewit beige 100L laundry basket with lid and bamboo handles for bedroom"
-                            class="product-image">
+                            class="product-image" loading="lazy">
                         <span
                             class="trend-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Amazon's Choice</span>
                     </div>
@@ -1253,10 +1636,10 @@
                     </div>
                 </article>
 
-                <article class="product-card group reveal" data-category="kitchen">
+                <article class="product-card group reveal" data-category="kitchen wall-decor">
                     <div class="product-media aspect-[4/3]">
                         <img src="images\Products\Kitchen\wood wall shelves.webp"
-                            alt="QEEIG set of 3 rustic brown floating shelves mounted on a kitchen wall" class="product-image">
+                            alt="QEEIG set of 3 rustic brown floating shelves mounted on a kitchen wall" class="product-image" loading="lazy">
                         <span
                             class="category-badge absolute left-4 top-4 z-10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">Kitchen</span>
                     </div>
@@ -1269,7 +1652,7 @@
                         <p class="mt-3 text-sm font-light leading-6 text-[#62564b]">A set of 3 rustic brown floating shelves with invisible brackets, perfect for kitchen decor, spices, and small essentials.</p>
                         <ul class="product-highlights mt-5">
                             <li>Invisible bracket design for a clean, modern farmhouse look</li>
-                            <li>Holds up to 25 lbs each — sturdy enough for books and decor</li>
+                            <li>Holds up to 25 lbs each â€” sturdy enough for books and decor</li>
                         </ul>
                         <a href="https://amzn.to/4oL9cZe" class="premium-cta" target="_blank"
                             rel="noopener sponsored">View on Amazon</a>
@@ -1279,268 +1662,15 @@
             </div>
 
             <div class="mt-14 text-center">
-                <a href="#"
+                <a href="#categories"
                     class="inline-flex min-h-14 items-center justify-center rounded-full border border-[#1A1A1A] bg-transparent px-10 text-[11px] font-bold uppercase tracking-[0.18em] text-[#1A1A1A] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1A1A1A] hover:text-white hover:shadow-2xl">
-                    Discover More 2026 Finds
+                    Explore All Categories
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="finds-legacy" class="hidden py-24 bg-white" aria-hidden="true">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-                <div>
-                    <span class="text-beige-dark uppercase tracking-widest text-xs font-bold mb-2 block">The
-                        Shortlist</span>
-                    <h2 class="text-4xl md:text-5xl font-serif">Featured Amazon Finds</h2>
-                </div>
-                <p class="text-neutral-500 max-w-sm font-light">
-                    Meticulously curated premium decor pieces that look designer but stay within budget.
-                </p>
-            </div>
 
-            <!-- Product Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12" id="legacy-product-grid">
-                <!-- Product Card Template (Will be duplicated for 12 items) -->
-                <!-- Item 1 -->
-                <div class="product-card group reveal">
-                    <div
-                        class="decor-image-box relative overflow-hidden rounded-xl bg-beige-light aspect-[3/4] mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=800&auto=format&fit=crop"
-                            alt="Nordic Vase"
-                            class="product-image w-full h-full object-cover transition-transform duration-500">
-                        <div
-                            class="absolute top-4 right-4 glass px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
-                            Trending</div>
-                    </div>
-                    <div class="product-details">
-                        <div class="flex justify-between items-start mb-2 gap-3">
-                            <h3 class="text-lg font-serif">Minimalist Ceramic Nordic Vase</h3>
-                            <div class="flex text-yellow-500 scale-75 origin-right shrink-0">★★★★★</div>
-                        </div>
-                        <p class="text-sm text-neutral-500 mb-3 font-light leading-relaxed">
-                            Handcrafted matte finish ceramic vase perfect for pampas grass arrangements.
-                        </p>
-                        <p class="short-benefit">Turns empty shelves into calm, curated statement moments.</p>
-                        <p class="love-label">Why people love it</p>
-                        <ul class="love-list">
-                            <li>Soft Nordic shape with a premium matte finish</li>
-                            <li>Perfect for pampas, stems, or standalone styling</li>
-                            <li>Easy to place on shelves, consoles, and nightstands</li>
-                        </ul>
-                        <a href="#" class="premium-cta">
-                            View on Amazon
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="product-card group reveal">
-                    <div
-                        class="decor-image-box relative overflow-hidden rounded-xl bg-beige-light aspect-[3/4] mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1544450297-f34a04e4053c?q=80&w=800&auto=format&fit=crop"
-                            alt="Velvet Cushion"
-                            class="product-image w-full h-full object-cover transition-transform duration-500">
-                    </div>
-                    <div class="product-details">
-                        <div class="flex justify-between items-start mb-2 gap-3">
-                            <h3 class="text-lg font-serif">Premium Velvet Throw Pillows</h3>
-                            <div class="flex text-yellow-500 scale-75 origin-right shrink-0">★★★★☆</div>
-                        </div>
-                        <p class="text-sm text-neutral-500 mb-3 font-light leading-relaxed">
-                            Ultra-soft luxury velvet covers in earthy tones to elevate your sofa aesthetic.
-                        </p>
-                        <p class="short-benefit">Makes your sofa feel warmer, softer, and instantly styled.</p>
-                        <p class="love-label">Why people love it</p>
-                        <ul class="love-list">
-                            <li>Rich velvet texture adds a designer layer</li>
-                            <li>Earthy tones blend with modern neutral rooms</li>
-                            <li>Quick refresh for sofas, beds, and reading chairs</li>
-                        </ul>
-                        <a href="#" class="premium-cta">
-                            Shop This Look
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="product-card group reveal">
-                    <div
-                        class="decor-image-box relative overflow-hidden rounded-xl bg-beige-light aspect-[3/4] mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1513519107127-1bed33748e4c?q=80&w=800&auto=format&fit=crop"
-                            alt="Task Lamp"
-                            class="product-image w-full h-full object-cover transition-transform duration-500">
-                    </div>
-                    <div class="product-details">
-                        <div class="flex justify-between items-start mb-2 gap-3">
-                            <h3 class="text-lg font-serif">Antique Brass Reading Lamp</h3>
-                            <div class="flex text-yellow-500 scale-75 origin-right shrink-0">★★★★★</div>
-                        </div>
-                        <p class="text-sm text-neutral-500 mb-3 font-light leading-relaxed">
-                            Sophisticated metal task lamp with adjustable neck for a modern workspace.
-                        </p>
-                        <p class="short-benefit">Adds warm focused light for slow evenings and polished desks.</p>
-                        <p class="love-label">Why people love it</p>
-                        <ul class="love-list">
-                            <li>Antique brass finish feels timeless and refined</li>
-                            <li>Adjustable neck keeps lighting practical</li>
-                            <li>Ideal for desks, bedside tables, and cozy corners</li>
-                        </ul>
-                        <a href="#" class="premium-cta">
-                            See Latest Price
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="product-card group reveal">
-                    <div
-                        class="decor-image-box relative overflow-hidden rounded-xl bg-beige-light aspect-[3/4] mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1594913785162-e6785b426cb7?q=80&w=800&auto=format&fit=crop"
-                            alt="Luxury Candle"
-                            class="product-image w-full h-full object-cover transition-transform duration-500">
-                    </div>
-                    <div class="product-details">
-                        <div class="flex justify-between items-start mb-2 gap-3">
-                            <h3 class="text-lg font-serif">Scented Soy Wax Therapy Candle</h3>
-                            <div class="flex text-yellow-500 scale-75 origin-right shrink-0">★★★★★</div>
-                        </div>
-                        <p class="text-sm text-neutral-500 mb-3 font-light leading-relaxed">
-                            Premium essential oil blends in a chic smoked glass jar for ultimate relaxation.
-                        </p>
-                        <p class="short-benefit">Creates a spa-like glow that makes nights feel softer.</p>
-                        <p class="love-label">Why people love it</p>
-                        <ul class="love-list">
-                            <li>Smoked glass jar looks elegant on any tray</li>
-                            <li>Essential oil blend adds a relaxing mood</li>
-                            <li>Perfect for bath shelves and bedside styling</li>
-                        </ul>
-                        <a href="#" class="premium-cta">
-                            Explore Decor
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Duplicating products for grid visual completeness -->
-                <!-- Item 5 -->
-                <div class="product-card group reveal">
-                    <div
-                        class="decor-image-box relative overflow-hidden rounded-xl bg-beige-light aspect-[3/4] mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800&auto=format&fit=crop"
-                            alt="Chair"
-                            class="product-image w-full h-full object-cover transition-transform duration-500">
-                    </div>
-                    <div class="product-details">
-                        <h3 class="text-lg font-serif mb-1">Rattan Accent Armchair</h3>
-                        <div class="flex text-yellow-500 scale-75 origin-left mb-2">★★★★★</div>
-                        <p class="text-sm text-neutral-500 mb-3 font-light leading-relaxed line-clamp-2">
-                            Natural rattan weaving with solid oak frame for a Scandinavian touch.
-                        </p>
-                        <p class="short-benefit">Transforms a quiet corner into a breezy designer nook.</p>
-                        <p class="love-label">Why people love it</p>
-                        <ul class="love-list">
-                            <li>Natural woven texture brings warmth without clutter</li>
-                            <li>Statement seating for small living spaces</li>
-                            <li>Fits Scandinavian, coastal, and organic modern rooms</li>
-                        </ul>
-                        <a href="#" class="premium-cta">
-                            Get This Style
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Add more as needed placeholders -->
-                <!-- Item 6 -->
-                <div class="product-card group reveal">
-                    <div
-                        class="decor-image-box relative overflow-hidden rounded-xl bg-beige-light aspect-[3/4] mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5db?q=80&w=800&auto=format&fit=crop"
-                            alt="Mirror"
-                            class="product-image w-full h-full object-cover transition-transform duration-500">
-                    </div>
-                    <div class="product-details">
-                        <h3 class="text-lg font-serif mb-1">Ornate Gold Wall Mirror</h3>
-                        <div class="flex text-yellow-500 scale-75 origin-left mb-2">★★★★☆</div>
-                        <p class="text-sm text-neutral-500 mb-3 font-light leading-relaxed line-clamp-2">
-                            Vintage-inspired Baroque frame to add depth and luxury to any hallway.
-                        </p>
-                        <p class="short-benefit">Makes narrow walls feel brighter, grander, and more romantic.</p>
-                        <p class="love-label">Why people love it</p>
-                        <ul class="love-list">
-                            <li>Gold frame adds an old-money accent</li>
-                            <li>Reflects light to visually open small spaces</li>
-                            <li>Beautiful above consoles, vanities, and mantels</li>
-                        </ul>
-                        <a href="#" class="premium-cta">
-                            View on Amazon
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Item 7 -->
-                <div class="product-card group reveal">
-                    <div
-                        class="decor-image-box relative overflow-hidden rounded-xl bg-beige-light aspect-[3/4] mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1594913785202-480112702130?q=80&w=800&auto=format&fit=crop"
-                            alt="Art"
-                            class="product-image w-full h-full object-cover transition-transform duration-500">
-                    </div>
-                    <div class="product-details">
-                        <h3 class="text-lg font-serif mb-1">Abstract Canvas Wall Art</h3>
-                        <div class="flex text-yellow-500 scale-75 origin-left mb-2">★★★★★</div>
-                        <p class="text-sm text-neutral-500 mb-3 font-light leading-relaxed line-clamp-2">
-                            Hand-painted textures with muted gold leaf accents.
-                        </p>
-                        <p class="short-benefit">Gives blank walls a gallery feel without overwhelming the room.</p>
-                        <p class="love-label">Why people love it</p>
-                        <ul class="love-list">
-                            <li>Textured neutrals feel calm and expensive</li>
-                            <li>Gold accents pair beautifully with modern decor</li>
-                            <li>Instant focal point for bedrooms and living rooms</li>
-                        </ul>
-                        <a href="#" class="premium-cta">
-                            Shop This Look
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Item 8 -->
-                <div class="product-card group reveal">
-                    <div
-                        class="decor-image-box relative overflow-hidden rounded-xl bg-beige-light aspect-[3/4] mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1581781870027-04212e231e96?q=80&w=800&auto=format&fit=crop"
-                            alt="Planter"
-                            class="product-image w-full h-full object-cover transition-transform duration-500">
-                    </div>
-                    <div class="product-details">
-                        <h3 class="text-lg font-serif mb-1">Modern Footed Planter</h3>
-                        <div class="flex text-yellow-500 scale-75 origin-left mb-2">★★★★★</div>
-                        <p class="text-sm text-neutral-500 mb-3 font-light leading-relaxed line-clamp-2">
-                            Mid-century stand with ceramic pot for indoor greenery.
-                        </p>
-                        <p class="short-benefit">Lifts greenery beautifully so rooms feel fresher and more alive.</p>
-                        <p class="love-label">Why people love it</p>
-                        <ul class="love-list">
-                            <li>Footed profile adds height without taking much space</li>
-                            <li>Clean ceramic pot works with any color palette</li>
-                            <li>Great for Pinterest-inspired plant corners</li>
-                        </ul>
-                        <a href="#" class="premium-cta">
-                            See Latest Price
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-16 text-center">
-                <button
-                    class="bg-luxury-black text-white px-12 py-5 rounded-full text-xs font-bold uppercase tracking-widest shadow-2xl hover:scale-105 transition-transform">
-                    Discover More 2026 Finds
-                </button>
-            </div>
-        </div>
-    </section>
 
     <!-- PINTEREST-INSPIRED MASONRY GALLERY -->
     <section id="inspiration" class="py-24 bg-beige-light">
@@ -1554,27 +1684,27 @@
             <div class="masonry-grid space-y-4">
                 <div class="decor-image-box overflow-hidden rounded-2xl reveal">
                     <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=800&auto=format"
-                        alt="Aesthetic Space" class="w-full hover:scale-105 transition-transform duration-700">
+                        alt="Aesthetic Space" class="w-full hover:scale-105 transition-transform duration-700" loading="lazy">
                 </div>
                 <div class="decor-image-box overflow-hidden rounded-2xl reveal">
                     <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=800&auto=format"
-                        alt="Scrapbook" class="w-full hover:scale-105 transition-transform duration-700">
+                        alt="Scrapbook" class="w-full hover:scale-105 transition-transform duration-700" loading="lazy">
                 </div>
                 <div class="decor-image-box overflow-hidden rounded-2xl reveal">
                     <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=800&auto=format"
-                        alt="Modern Room" class="w-full hover:scale-105 transition-transform duration-700">
+                        alt="Modern Room" class="w-full hover:scale-105 transition-transform duration-700" loading="lazy">
                 </div>
                 <div class="decor-image-box overflow-hidden rounded-2xl reveal">
                     <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=800&auto=format"
-                        alt="Shelfie" class="w-full hover:scale-105 transition-transform duration-700">
+                        alt="Shelfie" class="w-full hover:scale-105 transition-transform duration-700" loading="lazy">
                 </div>
                 <div class="decor-image-box overflow-hidden rounded-2xl reveal">
-                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7eaa511?q=80&w=800&auto=format"
-                        alt="Cozy Bedroom" class="w-full hover:scale-105 transition-transform duration-700">
+                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=800&auto=format"
+                        alt="Cozy Bedroom" class="w-full hover:scale-105 transition-transform duration-700" loading="lazy">
                 </div>
                 <div class="decor-image-box overflow-hidden rounded-2xl reveal">
                     <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?q=80&w=800&auto=format"
-                        alt="Scandinavian Living" class="w-full hover:scale-105 transition-transform duration-700">
+                        alt="Scandinavian Living" class="w-full hover:scale-105 transition-transform duration-700" loading="lazy">
                 </div>
             </div>
         </div>
@@ -1663,11 +1793,7 @@
                         Curating the world's most beautiful, affordable Amazon decor finds for the modern, aesthetic
                         home.
                     </p>
-                    <div class="flex space-x-6 text-neutral-400">
-                        <a href="#" class="hover:text-beige-dark transition-colors"><i data-lucide="instagram"></i></a>
-                        <a href="#" class="hover:text-beige-dark transition-colors"><i data-lucide="map-pin"></i></a>
-                        <a href="#" class="hover:text-beige-dark transition-colors"><i data-lucide="twitter"></i></a>
-                    </div>
+
                 </div>
 
                 <!-- Links -->
@@ -1685,9 +1811,9 @@
                     <h5 class="text-xs font-bold uppercase tracking-widest mb-8">Helpful Links</h5>
                     <ul class="space-y-4 text-sm text-neutral-500 font-light">
                         <li><a href="#" class="hover:text-luxury-black">About Us</a></li>
-                        <li><a href="#" class="hover:text-luxury-black">Shipping Info</a></li>
-                        <li><a href="#" class="hover:text-luxury-black">Contact</a></li>
+                        <li><a href="contact.html" class="hover:text-luxury-black">Contact</a></li>
                         <li><a href="privacy-policy.html" class="hover:text-luxury-black">Privacy Policy</a></li>
+                        <li><a href="disclaimer.html" class="hover:text-luxury-black">Disclaimer</a></li>
                     </ul>
                 </div>
 
@@ -1706,28 +1832,607 @@
 
             <div class="border-t border-beige pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex space-x-8 text-[11px] font-bold uppercase tracking-widest text-neutral-400">
-                    <a href="#" class="hover:text-luxury-black transition-colors">Affiliate Disclosure</a>
-                    <a href="#" class="hover:text-luxury-black transition-colors">Terms of Service</a>
+                    <a href="disclaimer.html" class="hover:text-luxury-black transition-colors">Disclaimer</a>
+                    <a href="affiliate-disclosure.html" class="hover:text-luxury-black transition-colors">Affiliate Disclosure</a>
                 </div>
 
             </div>
         </div>
     </footer>
 
+    <!-- BACK TO TOP BUTTON -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <script type="module">
+        import React, { useEffect, useRef } from 'https://esm.sh/react@18.3.1';
+        import { createRoot } from 'https://esm.sh/react-dom@18.3.1/client';
+        import { motion, useReducedMotion } from 'https://esm.sh/framer-motion@11.3.30';
+
+        const h = React.createElement;
+        const springEase = [0.22, 1, 0.36, 1];
+
+        function PremiumHero() {
+            const reduceMotion = useReducedMotion();
+            const heroRef = useRef(null);
+            const parallaxRefs = useRef([]);
+            const frameRef = useRef(null);
+            const pointerRef = useRef({ x: 0, y: 0 });
+
+            useEffect(() => {
+                if (reduceMotion) return undefined;
+
+                const handlePointerMove = (event) => {
+                    const bounds = heroRef.current?.getBoundingClientRect();
+                    if (!bounds) return;
+                    pointerRef.current.x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 2;
+                    pointerRef.current.y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 2;
+
+                    if (frameRef.current) return;
+                    frameRef.current = requestAnimationFrame(() => {
+                        parallaxRefs.current.forEach((node, index) => {
+                            if (!node) return;
+                            const depth = 1 - index * 0.16;
+                            const moveX = pointerRef.current.x * 20 * depth;
+                            const moveY = pointerRef.current.y * 20 * depth;
+                            node.style.setProperty('--px', `${moveX.toFixed(2)}px`);
+                            node.style.setProperty('--py', `${moveY.toFixed(2)}px`);
+                        });
+                        frameRef.current = null;
+                    });
+                };
+
+                const resetPointer = () => {
+                    parallaxRefs.current.forEach((node) => {
+                        if (!node) return;
+                        node.style.setProperty('--px', '0px');
+                        node.style.setProperty('--py', '0px');
+                    });
+                };
+
+                const hero = heroRef.current;
+                hero?.addEventListener('pointermove', handlePointerMove);
+                hero?.addEventListener('pointerleave', resetPointer);
+
+                return () => {
+                    hero?.removeEventListener('pointermove', handlePointerMove);
+                    hero?.removeEventListener('pointerleave', resetPointer);
+                    if (frameRef.current) cancelAnimationFrame(frameRef.current);
+                };
+            }, [reduceMotion]);
+
+            const fadeUp = (delay) => ({
+                initial: reduceMotion ? false : { opacity: 0, y: 40 },
+                animate: { opacity: 1, y: 0 },
+                transition: { duration: 0.9, delay, ease: springEase }
+            });
+
+            const cardMotion = (delay, x = 80) => ({
+                initial: reduceMotion ? false : { opacity: 0, x, scale: 0.9 },
+                animate: { opacity: 1, x: 0, scale: 1 },
+                transition: { duration: 0.9, delay, ease: springEase }
+            });
+
+            const products = [
+                { name: 'Ambient Table Lamp', label: 'Warm Nordic Glow', price: '$48', image: 'images/Products/Lighting/Floor%20Standing%20Tall%20Lamp.webp' },
+                { name: 'Textured Ceramic Vase', label: 'Sculptural Accent', price: '$32', image: 'images/Products/Living%20room/Ceramic%20Vase.webp' },
+                { name: 'Soft Linen Pillow', label: 'Editorial Texture', price: '$24', image: 'images/Products/Living%20room/pillow.webp' }
+            ];
+
+            const floatingCards = [
+                { title: '4.9', caption: 'editor rating', className: 'right-[2%] top-[8%] w-32 sm:w-40', delay: 0.6, floatDelay: '0s' },
+                { title: '25+', caption: 'curated finds', className: 'left-[2%] bottom-[18%] w-36 sm:w-44', delay: 0.8, floatDelay: '-1.8s' },
+                { title: 'Prime', caption: 'fast home upgrades', className: 'right-[14%] bottom-[2%] w-36 sm:w-44', delay: 1, floatDelay: '-3.2s' }
+            ];
+
+            return h(
+                motion.section,
+                {
+                    ref: heroRef,
+                    id: 'home',
+                    className: 'premium-hero',
+                    'aria-label': 'Premium animated decor landing page',
+                    initial: reduceMotion ? false : { opacity: 0, scale: 0.97, y: 50 },
+                    animate: { opacity: 1, scale: 1, y: 0 },
+                    whileInView: { opacity: 1, y: 0 },
+                    viewport: { once: true, amount: 0.4 },
+                    transition: { duration: 0.9, ease: springEase }
+                },
+                h('img', {
+                    src: 'images/banner%201.webp',
+                    alt: 'Luxury living room decor',
+                    className: 'premium-hero-bg',
+                    fetchPriority: 'high'
+                }),
+                h(
+                    'div',
+                    { className: 'premium-hero-content container mx-auto grid min-h-screen grid-cols-1 gap-14 px-6 text-white lg:grid-cols-[0.95fr_1.05fr]' },
+                    h(
+                        'div',
+                        { className: 'flex max-w-3xl flex-col justify-center' },
+                        h(
+                            motion.div,
+                            { className: 'premium-kicker mb-7 w-fit', ...fadeUp(0.2) },
+                            h('span', { className: 'h-1.5 w-1.5 rounded-full bg-white/85' }),
+                            h('span', { className: 'text-[11px] font-bold uppercase tracking-[0.22em]' }, 'Curated Amazon home edits')
+                        ),
+                        h(
+                            motion.h1,
+                            {
+                                className: 'font-serif text-[clamp(3rem,8vw,6.9rem)] leading-[0.92] text-white',
+                                ...fadeUp(0.2)
+                            },
+                            'Make your space feel effortlessly luxurious.'
+                        ),
+                        h(
+                            motion.p,
+                            {
+                                className: 'mt-7 max-w-2xl text-base font-light leading-8 text-white/76 md:text-xl',
+                                ...fadeUp(0.35)
+                            },
+                            'A refined edit of sculptural lighting, warm textures, and elevated everyday decor chosen for homes that look calm, expensive, and deeply lived in.'
+                        ),
+                        h(
+                            motion.div,
+                            { className: 'mt-10 flex flex-wrap items-center gap-4', ...fadeUp(0.5) },
+                            h(
+                                'a',
+                                {
+                                    href: '#finds',
+                                    className: 'hero-premium-cta inline-flex min-h-12 items-center justify-center rounded-full bg-white px-7 text-[11px] font-bold uppercase tracking-[0.18em] text-luxury-black shadow-[0_18px_48px_rgba(0,0,0,.24)]'
+                                },
+                                'Shop The Edit'
+                            ),
+                            h(
+                                'a',
+                                {
+                                    href: '#categories',
+                                    className: 'hero-premium-cta inline-flex min-h-12 items-center justify-center rounded-full border border-white/35 px-7 text-[11px] font-bold uppercase tracking-[0.18em] text-white/90'
+                                },
+                                'Explore Rooms'
+                            )
+                        )
+                    ),
+                    h(
+                        'div',
+                        { className: 'relative mx-auto flex min-h-[520px] w-full max-w-[620px] items-center justify-center lg:min-h-[680px]' },
+                        h(
+                            motion.div,
+                            { className: 'absolute inset-x-8 top-12 h-px premium-orbit-line opacity-60', ...cardMotion(0.45, 50) }
+                        ),
+                        h(
+                            motion.div,
+                            { className: 'relative z-10 w-full max-w-[430px]', ...cardMotion(0.3) },
+                            h(
+                                'div',
+                                {
+                                    ref: (node) => { parallaxRefs.current[0] = node; },
+                                    className: 'premium-parallax-shell'
+                                },
+                                h(
+                                    'div',
+                                    { className: 'premium-float-shell', style: { animationDuration: '7.6s', animationDelay: '-0.7s' } },
+                                    h(
+                                        'div',
+                                        { className: 'premium-glass-card p-4 sm:p-5' },
+                                        h('img', {
+                                            src: 'images/living%20room%20decor.webp',
+                                            alt: 'Curated living room decor collection',
+                                            className: 'aspect-[4/3] w-full rounded-[18px] object-cover'
+                                        }),
+                                        h(
+                                            'div',
+                                            { className: 'mt-5 flex items-end justify-between gap-5' },
+                                            h(
+                                                'div',
+                                                null,
+                                                h('p', { className: 'text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-accent' }, 'Featured collection'),
+                                                h('h2', { className: 'mt-2 font-serif text-3xl leading-none text-luxury-black' }, 'Soft Modern Living')
+                                            ),
+                                            h(
+                                                'a',
+                                                {
+                                                    href: '#finds',
+                                                    'data-category-filter': 'living-room',
+                                                    className: 'rounded-full bg-luxury-black px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-white transition-transform duration-300 hover:scale-105'
+                                                },
+                                                'View'
+                                            )
+                                        ),
+                                        h(
+                                            'div',
+                                            { className: 'mt-5 grid grid-cols-3 gap-3' },
+                                            products.map((product) =>
+                                                h(
+                                                    'div',
+                                                    { key: product.name, className: 'rounded-2xl bg-white/70 p-2 shadow-sm' },
+                                                    h('img', { src: product.image, alt: product.name, className: 'aspect-square w-full rounded-xl object-cover' }),
+                                                    h('p', { className: 'mt-2 truncate text-[10px] font-semibold text-luxury-black' }, product.name),
+                                                    h('p', { className: 'text-[10px] text-neutral-accent' }, product.price)
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        ),
+                        floatingCards.map((card, index) =>
+                            h(
+                                motion.div,
+                                { key: card.caption, className: `absolute z-20 ${card.className}`, ...cardMotion(card.delay, 64) },
+                                h(
+                                    'div',
+                                    {
+                                        ref: (node) => { parallaxRefs.current[index + 1] = node; },
+                                        className: 'premium-parallax-shell'
+                                    },
+                                    h(
+                                        'div',
+                                        { className: 'premium-float-shell', style: { animationDuration: `${6.2 + index * 0.7}s`, animationDelay: card.floatDelay } },
+                                        h(
+                                            'div',
+                                            { className: 'premium-glass-card p-4' },
+                                            h('p', { className: 'font-serif text-3xl leading-none text-luxury-black' }, card.title),
+                                            h('p', { className: 'mt-2 text-[10px] font-bold uppercase tracking-[0.18em] text-neutral-accent' }, card.caption)
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
+                h(
+                    'a',
+                    { href: '#categories', className: 'premium-scroll-cue', 'aria-label': 'Scroll to categories' },
+                    h('span', { className: 'block h-8 w-5 rounded-full border border-white/40 p-1' }, h('span', { className: 'mx-auto block h-1.5 w-1.5 rounded-full bg-white/70' }))
+                )
+            );
+        }
+
+        const heroRoot = document.getElementById('premium-hero-root');
+        if (heroRoot) {
+            createRoot(heroRoot).render(h(PremiumHero));
+        }
+    </script>
+
+    <script type="module">
+        const canvas = document.getElementById('hero-3d-canvas');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (canvas) {
+            const THREE = await import('https://unpkg.com/three@0.165.0/build/three.module.js');
+            const scene = new THREE.Scene();
+            scene.fog = new THREE.Fog(0xd9c6ad, 12, 28);
+
+            const renderer = new THREE.WebGLRenderer({
+                canvas,
+                antialias: true,
+                alpha: true,
+                powerPreference: 'high-performance'
+            });
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.8));
+            renderer.shadowMap.enabled = true;
+            renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+            renderer.outputColorSpace = THREE.SRGBColorSpace;
+            renderer.toneMapping = THREE.ACESFilmicToneMapping;
+            renderer.toneMappingExposure = 1.12;
+
+            const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
+            camera.position.set(0.1, 3.15, 11.5);
+
+            const root = new THREE.Group();
+            root.position.set(1.75, -0.38, 0);
+            root.rotation.set(0.08, -0.18, 0);
+            root.scale.setScalar(prefersReducedMotion ? 1 : 0.9);
+            scene.add(root);
+
+            const pointer = new THREE.Vector2(0, 0);
+            window.addEventListener('pointermove', (event) => {
+                pointer.x = (event.clientX / window.innerWidth - 0.5) * 2;
+                pointer.y = (event.clientY / window.innerHeight - 0.5) * 2;
+            });
+
+            const makeMat = (color, roughness = 0.72, metalness = 0.02) => new THREE.MeshStandardMaterial({
+                color,
+                roughness,
+                metalness
+            });
+
+            const clamp01 = (value) => Math.min(Math.max(value, 0), 1);
+            const easeOutCubic = (value) => 1 - Math.pow(1 - clamp01(value), 3);
+            const easeOutBack = (value) => {
+                const amount = clamp01(value) - 1;
+                return 1 + amount * amount * ((1.7 + 1) * amount + 1.7);
+            };
+            const entranceItems = [];
+            const registerEntrance = (object, delay, from = {}) => {
+                const base = {
+                    position: object.position.clone(),
+                    rotation: object.rotation.clone(),
+                    scale: object.scale.clone()
+                };
+
+                entranceItems.push({
+                    object,
+                    delay,
+                    duration: from.duration || 1.2,
+                    base,
+                    startPosition: base.position.clone().add(new THREE.Vector3(from.x || 0, from.y || 0, from.z || 0)),
+                    startRotation: new THREE.Euler(
+                        base.rotation.x + (from.rx || 0),
+                        base.rotation.y + (from.ry || 0),
+                        base.rotation.z + (from.rz || 0)
+                    ),
+                    startScale: base.scale.clone().multiplyScalar(from.scale || 0.82)
+                });
+
+                if (!prefersReducedMotion) {
+                    object.position.copy(entranceItems[entranceItems.length - 1].startPosition);
+                    object.rotation.copy(entranceItems[entranceItems.length - 1].startRotation);
+                    object.scale.copy(entranceItems[entranceItems.length - 1].startScale);
+                }
+            };
+
+            const cream = makeMat(0xf4eadc, 0.82);
+            const warmWhite = makeMat(0xfffbf3, 0.7);
+            const oak = makeMat(0x8f6846, 0.55);
+            const walnut = makeMat(0x5b3e2e, 0.62);
+            const clay = makeMat(0xc98f68, 0.68);
+            const moss = makeMat(0x68735a, 0.86);
+            const charcoal = makeMat(0x1b1714, 0.52);
+            const brass = makeMat(0xd2a25f, 0.34, 0.58);
+            const glass = new THREE.MeshPhysicalMaterial({
+                color: 0xfff2d5,
+                roughness: 0.2,
+                metalness: 0,
+                transmission: 0.2,
+                transparent: true,
+                opacity: 0.68
+            });
+
+            const addMesh = (geometry, material, position, rotation = [0, 0, 0], scale = [1, 1, 1], parent = root) => {
+                const mesh = new THREE.Mesh(geometry, material);
+                mesh.position.set(...position);
+                mesh.rotation.set(...rotation);
+                mesh.scale.set(...scale);
+                mesh.castShadow = true;
+                mesh.receiveShadow = true;
+                parent.add(mesh);
+                return mesh;
+            };
+
+            const floor = addMesh(new THREE.PlaneGeometry(16, 16), makeMat(0xd7c0a3, 0.9), [0, -1.65, 0], [-Math.PI / 2, 0, 0]);
+            floor.receiveShadow = true;
+
+            const backWall = addMesh(new THREE.PlaneGeometry(16, 9), makeMat(0xf2e3d1, 0.86), [0, 2.8, -5.25]);
+            backWall.receiveShadow = true;
+
+            const sideWall = addMesh(new THREE.PlaneGeometry(12, 9), makeMat(0xe5d0b8, 0.9), [7.95, 2.8, 0.5], [0, -Math.PI / 2, 0]);
+            sideWall.receiveShadow = true;
+
+            addMesh(new THREE.CylinderGeometry(3.2, 3.2, 0.045, 96), makeMat(0xefe2d2, 0.96), [0.6, -1.6, 0.55], [0, 0, 0], [1.35, 1, 0.72]);
+
+            const sofa = new THREE.Group();
+            root.add(sofa);
+            addMesh(new THREE.BoxGeometry(4.25, 0.82, 1.25), cream, [-0.15, -0.75, -1.95], [0, -0.05, 0], [1, 1, 1], sofa);
+            addMesh(new THREE.BoxGeometry(4.45, 1.25, 0.52), cream, [-0.18, -0.32, -2.58], [0, -0.05, 0], [1, 1, 1], sofa);
+            addMesh(new THREE.BoxGeometry(0.42, 0.95, 1.28), cream, [-2.55, -0.55, -1.95], [0, -0.05, 0], [1, 1, 1], sofa);
+            addMesh(new THREE.BoxGeometry(0.42, 0.95, 1.28), cream, [2.18, -0.55, -1.95], [0, -0.05, 0], [1, 1, 1], sofa);
+            addMesh(new THREE.BoxGeometry(0.85, 0.52, 0.18), clay, [-1.45, -0.04, -1.34], [0.12, -0.08, 0.02], [1, 1, 1], sofa);
+            addMesh(new THREE.BoxGeometry(0.78, 0.48, 0.18), moss, [0.1, -0.03, -1.32], [0.08, 0.08, -0.02], [1, 1, 1], sofa);
+            addMesh(new THREE.BoxGeometry(0.75, 0.5, 0.18), warmWhite, [1.38, -0.02, -1.35], [0.12, 0.04, -0.04], [1, 1, 1], sofa);
+            registerEntrance(sofa, 0.18, { y: -0.55, z: -0.75, ry: -0.16, scale: 0.72, duration: 1.35 });
+
+            const table = new THREE.Group();
+            root.add(table);
+            addMesh(new THREE.CylinderGeometry(0.9, 1.05, 0.18, 72), oak, [0.55, -0.92, 1.02], [0, 0, 0], [1.2, 1, 0.72], table);
+            addMesh(new THREE.CylinderGeometry(0.18, 0.24, 0.72, 32), walnut, [0.55, -1.24, 1.02], [0, 0, 0], [1, 1, 1], table);
+            addMesh(new THREE.CylinderGeometry(0.18, 0.13, 0.55, 32), clay, [0.04, -0.54, 0.9], [0, 0, 0], [1, 1, 1], table);
+            addMesh(new THREE.SphereGeometry(0.34, 32, 16), makeMat(0xe7d7c1, 0.78), [0.04, -0.19, 0.9], [0, 0, 0], [1, 0.72, 1], table);
+            addMesh(new THREE.BoxGeometry(0.76, 0.07, 0.52), charcoal, [1.02, -0.48, 1.02], [0, -0.45, 0], [1, 1, 1], table);
+            registerEntrance(table, 0.42, { y: -0.7, z: 0.9, ry: 0.22, scale: 0.45, duration: 1.18 });
+
+            const lamp = new THREE.Group();
+            root.add(lamp);
+            addMesh(new THREE.CylinderGeometry(0.08, 0.08, 2.35, 32), brass, [3.25, -0.47, -1.1], [0, 0, 0], [1, 1, 1], lamp);
+            addMesh(new THREE.CylinderGeometry(0.42, 0.58, 0.72, 48, 1, true), glass, [3.25, 0.88, -1.1], [0, 0, 0], [1, 1, 1], lamp);
+            addMesh(new THREE.TorusGeometry(0.38, 0.025, 12, 48), brass, [3.25, 1.24, -1.1], [Math.PI / 2, 0, 0], [1, 1, 1], lamp);
+            const lampGlow = new THREE.PointLight(0xffd7a1, 2.4, 6.5, 1.6);
+            lampGlow.position.set(3.25, 0.9, -1.1);
+            lamp.add(lampGlow);
+            registerEntrance(lamp, 0.62, { y: -1.0, x: 0.55, rz: -0.12, scale: 0.68, duration: 1.2 });
+
+            const artPanels = new THREE.Group();
+            root.add(artPanels);
+            const panelColors = [0xfff7ec, 0xd7aa82, 0x20201d, 0x7d816c];
+            [-2.45, -1.1, 0.35].forEach((x, index) => {
+                const panel = new THREE.Group();
+                panel.position.set(x, 1.75 + index * 0.18, -5.08);
+                artPanels.add(panel);
+                addMesh(new THREE.BoxGeometry(1.0, 1.42, 0.08), warmWhite, [0, 0, 0], [0, 0, 0], [1, 1, 1], panel);
+                addMesh(new THREE.BoxGeometry(0.72, 0.08, 0.09), makeMat(panelColors[index + 1], 0.62), [0, 0.24, 0.05], [0, 0, index * 0.32], [1, 1, 1], panel);
+                addMesh(new THREE.SphereGeometry(0.16, 28, 14), makeMat(panelColors[index], 0.7), [-0.12, -0.18, 0.06], [0, 0, 0], [1, 1, 1], panel);
+                registerEntrance(panel, 0.72 + index * 0.14, { y: 0.35, z: -0.45, rz: -0.2 + index * 0.15, scale: 0.72, duration: 1.0 });
+            });
+
+            const floating = new THREE.Group();
+            root.add(floating);
+            const cardData = [
+                { x: -2.9, y: 1.0, z: 1.35, color: 0xf6ede2, accent: 0xc99162 },
+                { x: 2.65, y: 1.55, z: 0.52, color: 0xfffaf1, accent: 0x59624f },
+                { x: 3.9, y: 0.25, z: 1.95, color: 0xefe1cb, accent: 0x1d1a17 }
+            ];
+            cardData.forEach((item, index) => {
+                const card = new THREE.Group();
+                card.position.set(item.x, item.y, item.z);
+                card.rotation.set(0.04, -0.24 + index * 0.16, 0.03);
+                floating.add(card);
+                addMesh(new THREE.BoxGeometry(1.18, 1.55, 0.08), makeMat(item.color, 0.58), [0, 0, 0], [0, 0, 0], [1, 1, 1], card);
+                addMesh(new THREE.BoxGeometry(0.88, 0.62, 0.09), makeMat(item.accent, 0.48), [0, 0.3, 0.06], [0, 0, 0], [1, 1, 1], card);
+                addMesh(new THREE.BoxGeometry(0.64, 0.06, 0.1), charcoal, [-0.03, -0.28, 0.08], [0, 0, 0], [1, 1, 1], card);
+                addMesh(new THREE.BoxGeometry(0.42, 0.05, 0.1), makeMat(0xb9a38c, 0.7), [-0.14, -0.45, 0.08], [0, 0, 0], [1, 1, 1], card);
+                registerEntrance(card, 0.96 + index * 0.18, { y: -0.35, z: 1.4, ry: -0.5, rz: 0.22, scale: 0.42, duration: 1.25 });
+            });
+
+            const plant = new THREE.Group();
+            root.add(plant);
+            addMesh(new THREE.CylinderGeometry(0.34, 0.42, 0.56, 32), makeMat(0xb87f58, 0.78), [-3.45, -1.28, -0.35], [0, 0, 0], [1, 1, 1], plant);
+            for (let i = 0; i < 9; i++) {
+                const angle = (i / 9) * Math.PI * 2;
+                const leaf = addMesh(new THREE.SphereGeometry(0.26, 24, 12), makeMat(0x657456, 0.86), [
+                    -3.45 + Math.cos(angle) * 0.34,
+                    -0.72 + (i % 3) * 0.2,
+                    -0.35 + Math.sin(angle) * 0.26
+                ], [0, 0, angle], [0.48, 1.08, 0.2], plant);
+                leaf.rotation.z = angle;
+            }
+            registerEntrance(plant, 0.78, { x: -0.55, y: -0.55, rz: 0.2, scale: 0.55, duration: 1.1 });
+
+            const sparkleGeometry = new THREE.BufferGeometry();
+            const sparklePositions = [];
+            for (let i = 0; i < 90; i++) {
+                sparklePositions.push(
+                    -4.6 + Math.random() * 9.2,
+                    -0.4 + Math.random() * 4.8,
+                    -4.6 + Math.random() * 7.2
+                );
+            }
+            sparkleGeometry.setAttribute('position', new THREE.Float32BufferAttribute(sparklePositions, 3));
+            const sparkleMaterial = new THREE.PointsMaterial({
+                color: 0xfff1d0,
+                size: 0.045,
+                transparent: true,
+                opacity: prefersReducedMotion ? 0.22 : 0.48,
+                depthWrite: false,
+                blending: THREE.AdditiveBlending
+            });
+            const sparkles = new THREE.Points(sparkleGeometry, sparkleMaterial);
+            root.add(sparkles);
+
+            const ribbonMaterial = new THREE.MeshBasicMaterial({
+                color: 0xffdfaa,
+                transparent: true,
+                opacity: 0.18,
+                side: THREE.DoubleSide,
+                depthWrite: false,
+                blending: THREE.AdditiveBlending
+            });
+            const ribbons = new THREE.Group();
+            root.add(ribbons);
+            [
+                { y: 1.35, z: 0.4, s: 1 },
+                { y: 0.15, z: 1.75, s: 0.72 }
+            ].forEach((item, index) => {
+                const ribbon = new THREE.Mesh(new THREE.PlaneGeometry(5.6, 0.055), ribbonMaterial.clone());
+                ribbon.position.set(-1.2 + index * 1.2, item.y, item.z);
+                ribbon.rotation.set(0.18, -0.45, -0.14);
+                ribbon.scale.x = item.s;
+                ribbons.add(ribbon);
+            });
+
+            const sun = new THREE.DirectionalLight(0xfff1d4, 2.5);
+            sun.position.set(-3.5, 6.5, 5.5);
+            sun.castShadow = true;
+            sun.shadow.mapSize.width = 2048;
+            sun.shadow.mapSize.height = 2048;
+            sun.shadow.camera.left = -8;
+            sun.shadow.camera.right = 8;
+            sun.shadow.camera.top = 8;
+            sun.shadow.camera.bottom = -8;
+            scene.add(sun);
+            scene.add(new THREE.HemisphereLight(0xfff7e8, 0x8b6d52, 1.8));
+
+            const clock = new THREE.Clock();
+
+            const resizeHeroScene = () => {
+                const { clientWidth, clientHeight } = canvas;
+                renderer.setSize(clientWidth, clientHeight, false);
+                camera.aspect = clientWidth / Math.max(clientHeight, 1);
+                camera.userData.targetX = clientWidth < 768 ? 0.35 : 0.1;
+                camera.userData.targetY = clientWidth < 768 ? 2.8 : 3.15;
+                camera.userData.targetZ = clientWidth < 768 ? 13.2 : 11.5;
+                if (prefersReducedMotion) {
+                    camera.position.set(camera.userData.targetX, camera.userData.targetY, camera.userData.targetZ);
+                }
+                root.position.x = clientWidth < 768 ? 0.25 : 1.75;
+                root.scale.setScalar(clientWidth < 768 ? 0.86 : 1);
+                camera.updateProjectionMatrix();
+            };
+
+            window.addEventListener('resize', resizeHeroScene);
+            resizeHeroScene();
+
+            const animate = () => {
+                const elapsed = clock.getElapsedTime();
+                if (!prefersReducedMotion) {
+                    const intro = easeOutCubic(elapsed / 2.4);
+                    root.scale.setScalar((canvas.clientWidth < 768 ? 0.86 : 1) * (0.9 + intro * 0.1));
+                    root.rotation.y = -0.18 + intro * 0.18 + Math.sin(elapsed * 0.28) * 0.045 + pointer.x * 0.035;
+                    root.rotation.x = 0.08 * (1 - intro) + pointer.y * -0.012;
+
+                    camera.position.x = (camera.userData.targetX || 0.1) + (1 - intro) * 0.85 + Math.sin(elapsed * 0.18) * 0.04;
+                    camera.position.y = (camera.userData.targetY || 3.15) + (1 - intro) * 0.45;
+                    camera.position.z = (camera.userData.targetZ || 11.5) + (1 - intro) * 2.15;
+
+                    entranceItems.forEach((item) => {
+                        const progress = easeOutBack((elapsed - item.delay) / item.duration);
+                        item.object.position.lerpVectors(item.startPosition, item.base.position, progress);
+                        item.object.rotation.x = item.startRotation.x + (item.base.rotation.x - item.startRotation.x) * progress;
+                        item.object.rotation.y = item.startRotation.y + (item.base.rotation.y - item.startRotation.y) * progress;
+                        item.object.rotation.z = item.startRotation.z + (item.base.rotation.z - item.startRotation.z) * progress;
+                        item.object.scale.lerpVectors(item.startScale, item.base.scale, progress);
+                    });
+
+                    floating.children.forEach((card, index) => {
+                        const drift = easeOutCubic((elapsed - 1.2 - index * 0.12) / 1.1);
+                        if (drift > 0.99) {
+                            card.position.y = cardData[index].y + Math.sin(elapsed * 0.9 + index) * 0.11;
+                            card.position.z = cardData[index].z + Math.sin(elapsed * 0.52 + index) * 0.08;
+                            card.rotation.z = 0.03 + Math.sin(elapsed * 0.5 + index) * 0.035;
+                        }
+                    });
+                    artPanels.children.forEach((panel, index) => {
+                        if (elapsed > 1.8) {
+                            panel.position.y = 1.75 + index * 0.18 + Math.sin(elapsed * 0.6 + index) * 0.035;
+                        }
+                    });
+                    sparkles.rotation.y = elapsed * 0.045;
+                    sparkleMaterial.opacity = 0.28 + Math.sin(elapsed * 1.35) * 0.18;
+                    ribbons.children.forEach((ribbon, index) => {
+                        ribbon.position.x = -3.2 + ((elapsed * (0.36 + index * 0.06) + index * 1.8) % 7.8);
+                        ribbon.material.opacity = 0.1 + Math.sin(elapsed * 1.15 + index) * 0.05;
+                    });
+                    lampGlow.intensity = 2.2 + Math.sin(elapsed * 1.6) * 0.22;
+                }
+                camera.lookAt(0.9 + pointer.x * 0.25, 0.05 + pointer.y * -0.12, -0.8);
+                renderer.render(scene, camera);
+                requestAnimationFrame(animate);
+            };
+
+            animate();
+        }
+    </script>
+
     <!-- JavaScript -->
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Navbar Scroll Effect
+        // Navbar Scroll Effect & Disclosure Hide
+        const disclosure = document.querySelector('.affiliate-disclosure');
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
                 navbar.classList.add('py-2', 'shadow-md');
                 navbar.classList.remove('py-4');
+                navbar.style.top = '0';
+                disclosure.style.transform = 'translateY(-100%)';
             } else {
                 navbar.classList.add('py-4');
                 navbar.classList.remove('py-2', 'shadow-md');
+                navbar.style.top = '26px';
+                disclosure.style.transform = 'translateY(0)';
             }
         });
 
@@ -1749,20 +2454,33 @@
         // Featured finds category filtering
         const filterButtons = document.querySelectorAll('.filter-pill');
         const productCards = document.querySelectorAll('#product-grid .product-card');
+        const findsSection = document.getElementById('finds');
+
+        const applyProductFilter = (selectedCategory) => {
+            filterButtons.forEach(filterButton => {
+                filterButton.classList.toggle('active', filterButton.dataset.filter === selectedCategory);
+            });
+
+            productCards.forEach(card => {
+                const cardCategories = card.dataset.category.split(' ');
+                const shouldShow = selectedCategory === 'all' || cardCategories.includes(selectedCategory);
+                card.classList.toggle('is-hidden', !shouldShow);
+            });
+        };
 
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
-                const selectedCategory = button.dataset.filter;
-
-                filterButtons.forEach(filterButton => {
-                    filterButton.classList.toggle('active', filterButton === button);
-                });
-
-                productCards.forEach(card => {
-                    const shouldShow = selectedCategory === 'all' || card.dataset.category === selectedCategory;
-                    card.classList.toggle('is-hidden', !shouldShow);
-                });
+                applyProductFilter(button.dataset.filter);
             });
+        });
+
+        document.addEventListener('click', (event) => {
+            const categoryLink = event.target.closest('[data-category-filter]');
+            if (!categoryLink) return;
+
+            event.preventDefault();
+            applyProductFilter(categoryLink.dataset.categoryFilter);
+            findsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
 
         // Form Submission Simulation
@@ -1818,6 +2536,19 @@
             if (window.innerWidth >= 768) {
                 setMobileMenuOpen(false);
             }
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
