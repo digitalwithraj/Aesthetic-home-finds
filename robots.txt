@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aesthetichomefinds.com/sitemap.xml
