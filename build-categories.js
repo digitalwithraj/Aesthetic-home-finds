@@ -20,6 +20,7 @@ const categories = [
   {
     slug: 'bedroom',
     name: 'Bedroom Decor',
+    breadcrumbName: 'Bedroom',
     filterKey: 'bedroom',
     tagline: 'Cozy & tranquil escapes',
     description: 'Transform your bedroom into a serene retreat with our curated selection of aesthetic bedroom decor from Amazon. From luxurious bedding sets to ambient lighting and smart storage solutions.',
@@ -29,6 +30,7 @@ const categories = [
   {
     slug: 'living-room',
     name: 'Living Room Essentials',
+    breadcrumbName: 'Living Room',
     filterKey: 'living-room',
     tagline: 'Social & stylish hubs',
     description: 'Elevate your living room with handpicked decor that blends comfort and modern elegance. From textured throw pillows to statement lamps and sculptural vases.',
@@ -38,6 +40,7 @@ const categories = [
   {
     slug: 'workspace',
     name: 'Workspace Aesthetics',
+    breadcrumbName: 'Workspace',
     filterKey: 'workspace',
     tagline: 'High-performance styling',
     description: 'Design a workspace that inspires productivity and creativity. Standing desks, monitor risers, sculptural accents, and organizational essentials for your home office.',
@@ -47,6 +50,7 @@ const categories = [
   {
     slug: 'kitchen-decor',
     name: 'Kitchen Decor',
+    breadcrumbName: 'Kitchen Decor',
     filterKey: 'kitchen',
     tagline: 'Functional charm',
     description: 'Make your kitchen as beautiful as it is functional. Curated picks including woven coasters, vintage vases, premium knife sets, runner rugs, and smart organizers.',
@@ -56,6 +60,7 @@ const categories = [
   {
     slug: 'cozy-lighting',
     name: 'Cozy Lighting',
+    breadcrumbName: 'Cozy Lighting',
     filterKey: 'lighting',
     tagline: 'Atmosphere & ambiance',
     description: 'Set the perfect mood with ambient lighting picks. Sunset projectors, fairy lights, dimmable floor lamps, rechargeable wall sconces, and LED projection lamps.',
@@ -65,6 +70,7 @@ const categories = [
   {
     slug: 'wall-decor',
     name: 'Wall Decor',
+    breadcrumbName: 'Wall Decor',
     filterKey: 'wall-decor',
     tagline: 'Personalized expressions',
     description: 'Turn bare walls into curated gallery spaces. Floating shelves, cork boards, and decorative accents that add personality and warmth to every room.',
@@ -78,6 +84,28 @@ function fixImagePaths(html) {
     .replace(/src="images\\/g, 'src="../images/')
     .replace(/src="\.\.\/images\//g, 'src="../images/')
     .replace(/\\/g, '/');
+}
+
+function generateBreadcrumb(cat, prefix) {
+  return `            <!-- Breadcrumb -->
+            <nav class="breadcrumb mb-6 text-xs font-medium uppercase tracking-widest" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="${prefix}">Home</a></li>
+                    <li><span class="separator" aria-hidden="true">/</span><a href="${prefix}#categories">Categories</a></li>
+                    <li><span class="separator" aria-hidden="true">/</span><span class="current" aria-current="page">${cat.breadcrumbName}</span></li>
+                </ol>
+            </nav>
+            <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aesthetichomefinds.shop/" },
+                    { "@type": "ListItem", "position": 2, "name": "Categories", "item": "https://www.aesthetichomefinds.shop/#categories" },
+                    { "@type": "ListItem", "position": 3, "name": "${cat.breadcrumbName}", "item": "https://www.aesthetichomefinds.shop/category/${cat.slug}/" }
+                ]
+            }
+            </script>`;
 }
 
 function generatePage(cat) {
@@ -190,6 +218,8 @@ function generatePage(cat) {
         .featured-finds { position:relative; overflow:hidden; background: radial-gradient(circle at 12% 12%,rgba(255,255,255,0.78),transparent 26%), radial-gradient(circle at 82% 18%,rgba(183,138,86,0.14),transparent 30%), linear-gradient(180deg,#f7f2eb 0%,#f3ede5 100%); }
         .featured-finds::before { content:""; position:absolute; inset:0; pointer-events:none; opacity:0.28; background-image:linear-gradient(rgba(255,255,255,0.18) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.12) 1px,transparent 1px); background-size:38px 38px; mask-image:linear-gradient(180deg,transparent,#000 20%,#000 80%,transparent); }
 
+        .breadcrumb ol { list-style:none; margin:0; padding:0; display:inline-flex; flex-wrap:wrap; align-items:center; }
+        .breadcrumb li { display:inline; }
         .breadcrumb a { color:#8B7355; text-decoration:none; transition:color 0.2s ease; }
         .breadcrumb a:hover { color:#1A1A1A; }
         .breadcrumb .separator { color:#ccc; margin:0 0.5rem; }
@@ -224,12 +254,7 @@ function generatePage(cat) {
         <div class="absolute -top-32 -right-32 w-96 h-96 bg-beige-dark opacity-[0.07] rounded-full blur-3xl"></div>
         <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-beige-dark opacity-[0.05] rounded-full blur-3xl"></div>
         <div class="container mx-auto px-6 relative z-10 text-center">
-            <!-- Breadcrumb -->
-            <nav class="breadcrumb mb-6 text-xs font-medium uppercase tracking-widest" aria-label="Breadcrumb">
-                <a href="../">Home</a>
-                <span class="separator" aria-hidden="true">/</span>
-                <span class="current">${cat.name}</span>
-            </nav>
+${generateBreadcrumb(cat, '../')}
             <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.32em] text-[#9b7650]">${cat.tagline}</span>
             <h1 class="text-4xl md:text-6xl font-serif mb-6 text-[#221f1b]">${cat.name}</h1>
             <p class="mx-auto max-w-2xl text-sm md:text-base font-light leading-7 text-[#62564b]">${cat.description}</p>
