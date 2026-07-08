@@ -45,7 +45,7 @@ const categories = [
     heroImage: '../images/work%20space%20decor.webp',
   },
   {
-    slug: 'kitchen',
+    slug: 'kitchen-decor',
     name: 'Kitchen Decor',
     filterKey: 'kitchen',
     tagline: 'Functional charm',
@@ -105,13 +105,13 @@ function generatePage(cat) {
     <title>${cat.name} | Aesthetic Home Finds</title>
     <meta name="description" content="${cat.metaDesc}">
     <meta name="p:domain_verify" content="43ac91cddd9fe9598ba33b03ddd693d1"/>
-    <link rel="canonical" href="https://www.aesthetichomefinds.shop/${cat.slug}/">
+    <link rel="canonical" href="https://www.aesthetichomefinds.shop/category/${cat.slug}/">
 
     <!-- Open Graph -->
     <meta property="og:title" content="${cat.name} | Aesthetic Home Finds">
     <meta property="og:description" content="${cat.metaDesc}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.aesthetichomefinds.shop/${cat.slug}/">
+    <meta property="og:url" content="https://www.aesthetichomefinds.shop/category/${cat.slug}/">
 
     <link rel="icon" href="../images/favicon/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
@@ -273,12 +273,12 @@ ${productCards}
                 <div>
                     <h5 class="text-xs font-bold uppercase tracking-widest mb-8">Shop Categories</h5>
                     <ul class="space-y-4 text-sm text-neutral-500 font-light">
-                        <li><a href="../bedroom/" class="hover:text-luxury-black">Bedroom</a></li>
-                        <li><a href="../living-room/" class="hover:text-luxury-black">Living Room</a></li>
-                        <li><a href="../workspace/" class="hover:text-luxury-black">Home Office</a></li>
-                        <li><a href="../kitchen/" class="hover:text-luxury-black">Kitchen & Dining</a></li>
-                        <li><a href="../cozy-lighting/" class="hover:text-luxury-black">Cozy Lighting</a></li>
-                        <li><a href="../wall-decor/" class="hover:text-luxury-black">Wall Decor</a></li>
+                        <li><a href="../category/bedroom/" class="hover:text-luxury-black">Bedroom</a></li>
+                        <li><a href="../category/living-room/" class="hover:text-luxury-black">Living Room</a></li>
+                        <li><a href="../category/workspace/" class="hover:text-luxury-black">Home Office</a></li>
+                        <li><a href="../category/kitchen-decor/" class="hover:text-luxury-black">Kitchen & Dining</a></li>
+                        <li><a href="../category/cozy-lighting/" class="hover:text-luxury-black">Cozy Lighting</a></li>
+                        <li><a href="../category/wall-decor/" class="hover:text-luxury-black">Wall Decor</a></li>
                     </ul>
                 </div>
                 <div>
@@ -339,13 +339,13 @@ ${productCards}
 
 // Generate all category pages
 categories.forEach(cat => {
-  const dir = path.join(__dirname, cat.slug);
+  const dir = path.join(__dirname, 'category', cat.slug);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   const filePath = path.join(dir, 'index.html');
   const html = generatePage(cat);
   fs.writeFileSync(filePath, html, 'utf-8');
   const products = allProducts.filter(p => p.categories.includes(cat.filterKey));
-  console.log(`Created ${cat.slug}/index.html (${products.length} products)`);
+  console.log(`Created category/${cat.slug}/index.html (${products.length} products)`);
 });
 
 console.log('\nAll category pages generated successfully!');

@@ -1,4 +1,18 @@
 {
   "cleanUrls": true,
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/bedroom/", "destination": "/category/bedroom/", "permanent": true },
+    { "source": "/bedroom", "destination": "/category/bedroom/", "permanent": true },
+    { "source": "/living-room/", "destination": "/category/living-room/", "permanent": true },
+    { "source": "/living-room", "destination": "/category/living-room/", "permanent": true },
+    { "source": "/workspace/", "destination": "/category/workspace/", "permanent": true },
+    { "source": "/workspace", "destination": "/category/workspace/", "permanent": true },
+    { "source": "/kitchen/", "destination": "/category/kitchen-decor/", "permanent": true },
+    { "source": "/kitchen", "destination": "/category/kitchen-decor/", "permanent": true },
+    { "source": "/cozy-lighting/", "destination": "/category/cozy-lighting/", "permanent": true },
+    { "source": "/cozy-lighting", "destination": "/category/cozy-lighting/", "permanent": true },
+    { "source": "/wall-decor/", "destination": "/category/wall-decor/", "permanent": true },
+    { "source": "/wall-decor", "destination": "/category/wall-decor/", "permanent": true }
+  ]
 }
