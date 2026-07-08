@@ -25,7 +25,7 @@ const categories = [
     tagline: 'Cozy & tranquil escapes',
     description: 'Transform your bedroom into a serene retreat with our curated selection of aesthetic bedroom decor from Amazon. From luxurious bedding sets to ambient lighting and smart storage solutions.',
     metaDesc: 'Shop curated aesthetic bedroom decor finds from Amazon. Discover cozy bedding, nightstands, ambient lighting, and minimalist bedroom essentials.',
-    heroImage: '../images/bedroom%20decor.webp',
+    heroImage: '/images/bedroom%20decor.webp',
   },
   {
     slug: 'living-room',
@@ -35,7 +35,7 @@ const categories = [
     tagline: 'Social & stylish hubs',
     description: 'Elevate your living room with handpicked decor that blends comfort and modern elegance. From textured throw pillows to statement lamps and sculptural vases.',
     metaDesc: 'Shop curated aesthetic living room decor finds from Amazon. Discover throw pillows, rugs, curtains, ceramic lamps, and minimalist living room essentials.',
-    heroImage: '../images/living%20room%20decor.webp',
+    heroImage: '/images/living%20room%20decor.webp',
   },
   {
     slug: 'workspace',
@@ -45,7 +45,7 @@ const categories = [
     tagline: 'High-performance styling',
     description: 'Design a workspace that inspires productivity and creativity. Standing desks, monitor risers, sculptural accents, and organizational essentials for your home office.',
     metaDesc: 'Shop curated aesthetic workspace and home office decor from Amazon. Discover standing desks, monitor stands, shelves, and minimalist desk accessories.',
-    heroImage: '../images/work%20space%20decor.webp',
+    heroImage: '/images/work%20space%20decor.webp',
   },
   {
     slug: 'kitchen-decor',
@@ -55,7 +55,7 @@ const categories = [
     tagline: 'Functional charm',
     description: 'Make your kitchen as beautiful as it is functional. Curated picks including woven coasters, vintage vases, premium knife sets, runner rugs, and smart organizers.',
     metaDesc: 'Shop curated aesthetic kitchen decor finds from Amazon. Discover coasters, organizers, ceramic vases, knife sets, and stylish kitchen essentials.',
-    heroImage: '../images/kitchen%20decor.webp',
+    heroImage: '/images/kitchen%20decor.webp',
   },
   {
     slug: 'cozy-lighting',
@@ -65,7 +65,7 @@ const categories = [
     tagline: 'Atmosphere & ambiance',
     description: 'Set the perfect mood with ambient lighting picks. Sunset projectors, fairy lights, dimmable floor lamps, rechargeable wall sconces, and LED projection lamps.',
     metaDesc: 'Shop curated cozy lighting finds from Amazon. Discover sunset projectors, fairy lights, floor lamps, wall sconces, and ambient LED lighting.',
-    heroImage: '../images/cozy%20lighting%20decor.webp',
+    heroImage: '/images/cozy%20lighting%20decor.webp',
   },
   {
     slug: 'wall-decor',
@@ -75,14 +75,14 @@ const categories = [
     tagline: 'Personalized expressions',
     description: 'Turn bare walls into curated gallery spaces. Floating shelves, cork boards, and decorative accents that add personality and warmth to every room.',
     metaDesc: 'Shop curated aesthetic wall decor finds from Amazon. Discover floating shelves, cork boards, wall art, and minimalist wall accessories.',
-    heroImage: '../images/wall%20decor.webp',
+    heroImage: '/images/wall%20decor.webp',
   },
 ];
 
 function fixImagePaths(html) {
   return html
-    .replace(/src="images\\/g, 'src="../images/')
-    .replace(/src="\.\.\/images\//g, 'src="../images/')
+    .replace(/src="images\\/g, 'src="/images/')
+    .replace(/src="\.\.\/images\//g, 'src="/images/')
     .replace(/\\/g, '/');
 }
 
@@ -141,10 +141,10 @@ function generatePage(cat) {
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.aesthetichomefinds.shop/category/${cat.slug}/">
 
-    <link rel="icon" href="../images/favicon/favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+    <link rel="icon" href="/images/favicon/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -231,15 +231,15 @@ function generatePage(cat) {
     <!-- STICKY NAVIGATION BAR -->
     <nav class="fixed top-[26px] w-full z-50 glass py-4 transition-all duration-300" id="navbar">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="../" class="inline-flex items-center" aria-label="Aesthetic Home Finds home">
-                <img src="../images/logo%20horizontal%20remove%20bg.png" alt="Aesthetic Home Finds" class="site-logo">
+            <a href="/" class="inline-flex items-center" aria-label="Aesthetic Home Finds home">
+                <img src="/images/logo%20horizontal%20remove%20bg.png" alt="Aesthetic Home Finds" class="site-logo">
             </a>
             <div class="hidden md:flex space-x-8 text-sm font-normal tracking-wide uppercase">
-                <a href="../#categories" class="hover:text-beige-dark transition-colors">Categories</a>
-                <a href="../#finds" class="hover:text-beige-dark transition-colors">Curated Finds</a>
-                <a href="../#inspiration" class="hover:text-beige-dark transition-colors">Inspiration</a>
+                <a href="/#categories" class="hover:text-beige-dark transition-colors">Categories</a>
+                <a href="/#finds" class="hover:text-beige-dark transition-colors">Curated Finds</a>
+                <a href="/#inspiration" class="hover:text-beige-dark transition-colors">Inspiration</a>
             </div>
-            <a href="../" class="md:hidden text-xs font-bold uppercase tracking-widest text-neutral-accent hover:text-luxury-black transition-colors">&larr; Home</a>
+            <a href="/" class="md:hidden text-xs font-bold uppercase tracking-widest text-neutral-accent hover:text-luxury-black transition-colors">&larr; Home</a>
         </div>
     </nav>
 
@@ -254,7 +254,7 @@ function generatePage(cat) {
         <div class="absolute -top-32 -right-32 w-96 h-96 bg-beige-dark opacity-[0.07] rounded-full blur-3xl"></div>
         <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-beige-dark opacity-[0.05] rounded-full blur-3xl"></div>
         <div class="container mx-auto px-6 relative z-10 text-center">
-${generateBreadcrumb(cat, '../')}
+${generateBreadcrumb(cat, '/')}
             <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.32em] text-[#9b7650]">${cat.tagline}</span>
             <h1 class="text-4xl md:text-6xl font-serif mb-6 text-[#221f1b]">${cat.name}</h1>
             <p class="mx-auto max-w-2xl text-sm md:text-base font-light leading-7 text-[#62564b]">${cat.description}</p>
@@ -277,7 +277,7 @@ ${productCards}
             </div>
 
             <div class="mt-14 text-center">
-                <a href="../#categories"
+                <a href="/#categories"
                     class="inline-flex min-h-14 items-center justify-center rounded-full border border-[#1A1A1A] bg-transparent px-10 text-[11px] font-bold uppercase tracking-[0.18em] text-[#1A1A1A] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1A1A1A] hover:text-white hover:shadow-2xl">
                     Explore All Categories
                 </a>
@@ -290,28 +290,28 @@ ${productCards}
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                 <div class="col-span-1 md:col-span-1">
-                    <a href="../" class="inline-flex items-center mb-6" aria-label="Aesthetic Home Finds home">
-                        <img src="../images/logo%20horizontal%20remove%20bg.png" alt="Aesthetic Home Finds" class="footer-logo">
+                    <a href="/" class="inline-flex items-center mb-6" aria-label="Aesthetic Home Finds home">
+                        <img src="/images/logo%20horizontal%20remove%20bg.png" alt="Aesthetic Home Finds" class="footer-logo">
                     </a>
                     <p class="text-sm text-neutral-400 font-light mb-8">Curating the world's most beautiful, affordable Amazon decor finds for the modern, aesthetic home.</p>
                 </div>
                 <div>
                     <h5 class="text-xs font-bold uppercase tracking-widest mb-8">Shop Categories</h5>
                     <ul class="space-y-4 text-sm text-neutral-500 font-light">
-                        <li><a href="../category/bedroom/" class="hover:text-luxury-black">Bedroom</a></li>
-                        <li><a href="../category/living-room/" class="hover:text-luxury-black">Living Room</a></li>
-                        <li><a href="../category/workspace/" class="hover:text-luxury-black">Home Office</a></li>
-                        <li><a href="../category/kitchen-decor/" class="hover:text-luxury-black">Kitchen & Dining</a></li>
-                        <li><a href="../category/cozy-lighting/" class="hover:text-luxury-black">Cozy Lighting</a></li>
-                        <li><a href="../category/wall-decor/" class="hover:text-luxury-black">Wall Decor</a></li>
+                        <li><a href="/category/bedroom/" class="hover:text-luxury-black">Bedroom</a></li>
+                        <li><a href="/category/living-room/" class="hover:text-luxury-black">Living Room</a></li>
+                        <li><a href="/category/workspace/" class="hover:text-luxury-black">Home Office</a></li>
+                        <li><a href="/category/kitchen-decor/" class="hover:text-luxury-black">Kitchen & Dining</a></li>
+                        <li><a href="/category/cozy-lighting/" class="hover:text-luxury-black">Cozy Lighting</a></li>
+                        <li><a href="/category/wall-decor/" class="hover:text-luxury-black">Wall Decor</a></li>
                     </ul>
                 </div>
                 <div>
                     <h5 class="text-xs font-bold uppercase tracking-widest mb-8">Helpful Links</h5>
                     <ul class="space-y-4 text-sm text-neutral-500 font-light">
-                        <li><a href="../contact.html" class="hover:text-luxury-black">Contact</a></li>
-                        <li><a href="../privacy-policy.html" class="hover:text-luxury-black">Privacy Policy</a></li>
-                        <li><a href="../disclaimer.html" class="hover:text-luxury-black">Disclaimer</a></li>
+                        <li><a href="/contact.html" class="hover:text-luxury-black">Contact</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-luxury-black">Privacy Policy</a></li>
+                        <li><a href="/disclaimer.html" class="hover:text-luxury-black">Disclaimer</a></li>
                     </ul>
                 </div>
                 <div>
@@ -322,8 +322,8 @@ ${productCards}
             </div>
             <div class="border-t border-beige pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex space-x-8 text-[11px] font-bold uppercase tracking-widest text-neutral-400">
-                    <a href="../disclaimer.html" class="hover:text-luxury-black transition-colors">Disclaimer</a>
-                    <a href="../affiliate-disclosure.html" class="hover:text-luxury-black transition-colors">Affiliate Disclosure</a>
+                    <a href="/disclaimer.html" class="hover:text-luxury-black transition-colors">Disclaimer</a>
+                    <a href="/affiliate-disclosure.html" class="hover:text-luxury-black transition-colors">Affiliate Disclosure</a>
                 </div>
             </div>
         </div>
